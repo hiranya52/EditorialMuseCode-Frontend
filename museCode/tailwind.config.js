@@ -1,0 +1,72 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./src/**/*.{html,ts}"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        "tertiary-container": "#462b1e",
+        "on-secondary": "#ffffff",
+        "on-tertiary": "#ffffff",
+        "background": "#fcf9f8",
+        "secondary-fixed": "#d9e5e4",
+        "surface-container-lowest": "#ffffff",
+        "on-primary": "#ffffff",
+        "on-secondary-fixed-variant": "#3e4949",
+        "surface-container-low": "#f6f3f2",
+        "primary-fixed-dim": "#aecccc",
+        "surface-container-high": "#ebe7e7",
+        "tertiary": "#2e170b",
+        "on-tertiary-container": "#b89180",
+        "secondary": "#566060",
+        "on-background": "#1c1b1b",
+        "surface-dim": "#dcd9d9",
+        "secondary-container": "#d9e5e4",
+        "primary-fixed": "#cae8e8",
+        "on-surface": "#1c1b1b",
+        "primary": "#032121",
+        "on-tertiary-fixed-variant": "#5e4032",
+        "inverse-on-surface": "#f3f0ef",
+        "on-secondary-container": "#5b6666",
+        "surface-container-highest": "#e5e2e1",
+        "surface-bright": "#fcf9f8",
+        "surface": "#fcf9f8",
+        "tertiary-fixed-dim": "#e8bdaa",
+        "on-primary-container": "#829f9f",
+        "error-container": "#ffdad6",
+        "on-surface-variant": "#414848",
+        "secondary-fixed-dim": "#bdc9c8",
+        "tertiary-fixed": "#ffdbcc",
+        "on-secondary-fixed": "#131d1d",
+        "on-primary-fixed": "#022020",
+        "on-tertiary-fixed": "#2d160a",
+        "surface-variant": "#e5e2e1",
+        "surface-tint": "#476363",
+        "on-primary-fixed-variant": "#304b4b",
+        "surface-container": "#f0edec",
+        "on-error": "#ffffff",
+        "inverse-primary": "#aecccc",
+        "error": "#ba1a1a",
+        "outline-variant": "#c1c8c7",
+        "primary-container": "#1a3636",
+        "outline": "#727878",
+        "on-error-container": "#93000a",
+        "inverse-surface": "#313030"
+      },
+      fontFamily: {
+        headline: ["Newsreader"],
+        body: ["Inter"],
+        label: ["Plus Jakarta Sans"]
+      },
+      borderRadius: {
+        DEFAULT: "0.125rem",
+        lg: "0.25rem",
+        xl: "0.5rem",
+        full: "0.75rem"
+      }
+    },
+  },
+  plugins: [],
+};
