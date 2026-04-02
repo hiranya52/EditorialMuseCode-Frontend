@@ -1,0 +1,86 @@
+<body class="bg-surface selection:bg-primary-fixed selection:text-primary overflow-x-hidden">
+<!-- The TopNavBar (Shared Component Template) -->
+<!-- Shell Visibility & Relevance: Navigation is suppressed on transactional pages like Login/Register -->
+<main class="min-h-screen flex items-stretch">
+<!-- Visual Narrative Section -->
+<div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-primary items-center justify-center p-24">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Artistic literary aesthetic" class="w-full h-full object-cover" data-alt="Monochrome close-up of vintage typewriter keys and aged manuscript paper with soft dramatic shadows and intellectual atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnTtVYUKahqVWYLkKlkVFJa8HbbfQekQponPjDsb1wt4kSDPwzkpPEL4YKy97NJuj4o1b7xD8jlk3X94vOiK07B2AyWXf4PI0f225KZ2SVTkuld31JG62BGey_vJHCIZNvSL9efCYgehYZkvYlmqgOvTOkWUewnP2qhjL_LNejxDt8A9gf5srCSarSedi9ReMdfrsffq-K1zHWoLkyxZ7_DzXvEmDTUcRinPdaMdH-pxQGFwzUf03qN0ZoRVkcmTGbeQTlXTJQSPY"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent z-10"></div>
+<div class="relative z-20 max-w-lg">
+<h1 class="font-headline italic text-5xl md:text-7xl text-surface mb-8 leading-tight">
+                    The Editorial Muse
+                </h1>
+<p class="font-body text-primary-fixed text-xl leading-relaxed opacity-90">
+                    A digital atelier for the modern writer. Join our curated community of thinkers and craftsmen.
+                </p>
+<div class="mt-12 flex items-center gap-4">
+<div class="h-[1px] w-12 bg-on-primary-container"></div>
+<span class="font-label text-xs tracking-[0.2em] uppercase text-on-primary-container">Established 2024</span>
+</div>
+</div>
+</div>
+<!-- Authentication Canvas -->
+<div class="w-full lg:w-1/2 flex flex-col justify-center px-8 md:px-20 lg:px-32 py-12 bg-surface">
+<!-- Brand Anchor for Mobile -->
+<div class="lg:hidden mb-12">
+<span class="font-headline italic text-2xl font-bold text-primary">The Editorial Muse</span>
+</div>
+<div class="max-w-md w-full mx-auto">
+<div class="mb-10">
+<h2 class="font-headline text-4xl text-on-surface mb-3">Welcome back</h2>
+<p class="font-body text-on-surface-variant">Please enter your details to access your atelier.</p>
+</div>
+<!-- Form -->
+<form class="space-y-8">
+<!-- Name Field (Register Mode - Hidden by Default or managed by UI state) -->
+<!-- In this "Combined" layout, we focus on the core flow as per instructions -->
+<div class="space-y-6">
+<div class="group relative">
+<label class="block font-label text-[10px] uppercase tracking-widest text-outline mb-1 transition-colors group-focus-within:text-primary" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 px-0 py-3 text-on-surface focus:ring-0 focus:border-primary transition-all placeholder:text-stone-300" id="email" name="email" placeholder="scribe@editorialmuse.com" type="email"/>
+</div>
+<div class="group relative">
+<div class="flex justify-between items-end mb-1">
+<label class="block font-label text-[10px] uppercase tracking-widest text-outline transition-colors group-focus-within:text-primary" for="password">Password</label>
+<a class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Forgot?</a>
+</div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 px-0 py-3 text-on-surface focus:ring-0 focus:border-primary transition-all placeholder:text-stone-300" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<div class="flex items-center space-x-2 py-2">
+<input class="w-4 h-4 rounded-sm border-outline-variant text-primary focus:ring-primary/20" id="remember" type="checkbox"/>
+<label class="font-label text-xs text-on-surface-variant" for="remember">Remember for 30 days</label>
+</div>
+<div class="pt-4 space-y-4">
+<button class="w-full bg-primary text-on-primary font-label text-xs uppercase tracking-widest py-5 rounded-sm hover:bg-primary-container transition-all active:scale-[0.98] duration-200" type="submit">
+                            Sign In
+                        </button>
+<div class="relative py-4">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-outline-variant/20"></div></div>
+<div class="relative flex justify-center text-xs uppercase"><span class="bg-surface px-4 font-label text-outline tracking-widest">or continue with</span></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 bg-surface-container-lowest border border-outline-variant/10 py-3 rounded-sm hover:bg-surface-container-low transition-colors group" type="button">
+<span class="material-symbols-outlined text-xl text-on-surface-variant group-hover:text-primary transition-colors">account_circle</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 bg-surface-container-lowest border border-outline-variant/10 py-3 rounded-sm hover:bg-surface-container-low transition-colors group" type="button">
+<span class="material-symbols-outlined text-xl text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">GitHub</span>
+</button>
+</div>
+</div>
+</form>
+<footer class="mt-16 text-center">
+<p class="font-body text-sm text-on-surface-variant">
+                        New to the journal?
+                        <a class="text-primary font-medium hover:underline decoration-tertiary underline-offset-4" href="#">Create an account</a>
+</p>
+</footer>
+</div>
+</div>
+</main>
+
+</body>
