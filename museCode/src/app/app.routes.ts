@@ -17,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'onboarding/personalize-feed',
     component: PersonalizeFeed
+  },
+  {
+    path: 'app/home',
+    component: MainPage
   }
 
 ];
