@@ -2,19 +2,20 @@ import { Routes } from '@angular/router';
 import { MainPage } from './pages/main-page/main-page';
 import { LogIn } from './pages/log-in/log-in';
 import { PersonalizeFeed } from './pages/personalize-feed/personalize-feed';
+import { LandingPage } from './pages/landing-page/landing-page';
 
 export const routes: Routes = [
 
   {
     path: '',
-    component:MainPage
+    component: LandingPage
   },
   {
-    path: 'logIn',
+    path: 'auth/login',
     component: LogIn
   },
   {
-    path: 'personalize-feed',
+    path: 'onboarding/personalize-feed',
     component: PersonalizeFeed
   }
 
