@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Article } from '../../../model/Article.model';
+import { ArticleCard } from "../article-card/article-card";
 
 @Component({
   selector: 'app-feed',
-  imports: [],
+  imports: [ArticleCard],
   templateUrl: './feed.html',
   styleUrl: './feed.css',
 })
