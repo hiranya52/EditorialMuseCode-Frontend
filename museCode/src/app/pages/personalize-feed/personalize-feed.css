@@ -1,0 +1,19 @@
+.glass-card {
+  background: rgba(252, 249, 248, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.category-grid::-webkit-scrollbar {
+  width: 4px;
+}
+.category-grid::-webkit-scrollbar-thumb {
+  background-color: #c1c8c7;
+  border-radius: 10px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
