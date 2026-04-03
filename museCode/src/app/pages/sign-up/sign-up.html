@@ -1,0 +1,163 @@
+<div class="body bg-surface selection:bg-primary-fixed selection:text-primary overflow-x-hidden">
+  <!-- The TopNavBar (Shared Component Template) -->
+  <main class="min-h-screen flex items-stretch">
+
+    <!-- Visual Narrative Section -->
+    <div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-primary items-center justify-center p-24">
+      <div class="absolute inset-0 z-0 opacity-40">
+        <img
+          alt="Artistic literary aesthetic"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjoW2jSotUM_hEzlcIg_agcqcoPsNpzWJaJuVM0ayzs1jv-52x9r8ZlbiBpAtyDB_SBdot4uhWsC5BHaqpca0T1ygoCxNwxSAoyS4b4i__jdn4mwTOqqvITQV0PP8lMTWctfNvDxBODHAmR6lo2isPuLQDl_LB_3dvphSoVV4q4Gs7ZzHet1c0egcS2ig-KB76nseRlNbdmoFY90EVfaGC9EIzhLmSdqCLpGVCPk0308breJPBkX01hNpzv6pYVf0f8yE3IbZVA2o"
+        />
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent z-10"></div>
+
+      <div class="relative z-20 max-w-lg">
+        <h1 class="font-headline italic text-5xl md:text-7xl text-surface mb-8 leading-tight">
+          The Editorial Muse
+        </h1>
+        <p class="font-body text-primary-fixed text-xl leading-relaxed opacity-90">
+          A digital atelier for the modern writer. Join our curated community of thinkers and craftsmen.
+        </p>
+        <div class="mt-12 flex items-center gap-4">
+          <div class="h-[1px] w-12 bg-on-primary-container"></div>
+          <span class="font-label text-xs tracking-[0.2em] uppercase text-on-primary-container">
+            Established 2024
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN UP SECTION -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-center px-8 md:px-20 lg:px-32 py-12 bg-surface">
+
+      <!-- Mobile Brand -->
+      <div class="lg:hidden mb-12">
+        <span class="font-headline italic text-2xl font-bold text-primary">
+          The Editorial Muse
+        </span>
+      </div>
+
+      <div class="max-w-md w-full mx-auto">
+
+        <!-- Header -->
+        <div class="mb-10">
+          <h2 class="font-headline text-3xl text-on-surface mb-2">
+            Create an Account
+          </h2>
+          <p class="font-body text-sm text-on-surface-variant">
+            Enter your details to begin your journey.
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form class="space-y-6" onsubmit="return false;">
+
+          <!-- Full Name -->
+          <div class="space-y-1">
+            <label class="font-label text-[0.6875rem] uppercase tracking-[0.1em] text-on-surface-variant" for="name">
+              Full Name
+            </label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Elias Thorne"
+              class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="space-y-1">
+            <label class="font-label text-[0.6875rem] uppercase tracking-[0.1em] text-on-surface-variant" for="email">
+              Email Address
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="elias@atelier.com"
+              class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40"
+            />
+          </div>
+
+          <!-- Password -->
+          <div class="space-y-1 relative">
+            <label class="font-label text-[0.6875rem] uppercase tracking-[0.1em] text-on-surface-variant" for="password">
+              Password
+            </label>
+            <div class="relative flex items-center">
+              <input
+                id="password"
+                type="password"
+                placeholder="••••••••"
+                class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 pr-10 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40"
+              />
+              <button type="button" class="absolute right-0 text-on-surface-variant hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-[20px]">visibility</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="w-full bg-primary text-on-primary py-4 px-6 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-90 active:scale-[0.98] transition-all duration-200 mt-4"
+          >
+            Create Account
+          </button>
+
+        </form>
+
+        <!-- Divider -->
+        <div class="relative my-10">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-outline-variant/10"></div>
+          </div>
+          <div class="relative flex justify-center text-[0.6875rem] uppercase tracking-[0.15em]">
+            <span class="bg-surface px-4 text-on-surface-variant">
+              Or continue with
+            </span>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="grid grid-cols-2 gap-4 mb-10">
+
+          <!-- Google -->
+          <button class="flex items-center justify-center gap-3 py-3 px-4 border border-outline-variant/20 rounded-sm hover:bg-surface-container-low transition-colors group">
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">
+              account_circle
+            </span>
+            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">
+              Google
+            </span>
+          </button>
+
+          <!-- GitHub -->
+          <button class="flex items-center justify-center gap-3 py-3 px-4 border border-outline-variant/20 rounded-sm hover:bg-surface-container-low transition-colors group">
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">
+              terminal
+            </span>
+            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">
+              GitHub
+            </span>
+          </button>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center">
+          <p class="font-body text-sm text-on-surface-variant">
+            Already have an account?
+            <a href="#" class="text-primary font-medium hover:underline underline-offset-4 ml-1">
+              Sign In
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
