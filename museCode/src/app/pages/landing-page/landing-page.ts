@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,4 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.css',
 })
-export class LandingPage {}
+export class LandingPage {
+
+  constructor(private router: Router) {}
+
+  goToLogIn(){
+    this.router.navigate(['/auth/login']);
+  }
+
+}

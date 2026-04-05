@@ -3,6 +3,7 @@ import { MainPage } from './pages/main-page/main-page';
 import { LogIn } from './pages/log-in/log-in';
 import { PersonalizeFeed } from './pages/personalize-feed/personalize-feed';
 import { LandingPage } from './pages/landing-page/landing-page';
+import { SignUp } from './pages/sign-up/sign-up';
 
 export const routes: Routes = [
 
@@ -21,6 +22,10 @@ export const routes: Routes = [
   {
     path: 'app/home',
     component: MainPage
+  },
+  {
+    path: 'signUp',
+    component: SignUp
   }
 
 ];
