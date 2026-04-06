@@ -1,10 +1,10 @@
 export interface Article {
+  authorName: string;
+  authorImage: string;
+  date: string;
   title: string;
   description: string;
-  author: string;
-  date: string;
   category: string;
   readTime: string;
-  image: string;
-  avatar: string;
+  articleImage: string;
 }
