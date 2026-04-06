@@ -1,4 +1,4 @@
-<article class="group flex flex-col md:flex-row gap-10">
+<!-- <article class="group flex flex-col md:flex-row gap-10">
 
   <div class="flex-1">
 
@@ -25,4 +25,162 @@
 
   <img class="w-full md:w-64 h-48 object-cover rounded" [src]="article.image" />
 
-</article>
+</article> -->
+
+
+<div class="w-full max-w-5xl">
+  <!-- Feed Filter -->
+  <div class="flex gap-8 border-b border-outline-variant/15 mb-10 overflow-x-auto whitespace-nowrap">
+    <button class="pb-4 px-1 border-b-2 border-primary text-sm font-semibold text-primary">For you</button>
+    <button
+      class="pb-4 px-1 border-b-2 border-transparent text-sm font-medium text-stone-400 hover:text-stone-600">Following</button>
+    <button
+      class="pb-4 px-1 border-b-2 border-transparent text-sm font-medium text-stone-400 hover:text-stone-600">Design</button>
+    <button
+      class="pb-4 px-1 border-b-2 border-transparent text-sm font-medium text-stone-400 hover:text-stone-600">Philosophy</button>
+    <button
+      class="pb-4 px-1 border-b-2 border-transparent text-sm font-medium text-stone-400 hover:text-stone-600">Technology</button>
+  </div>
+  <!-- Articles Feed -->
+  <div class="flex flex-col gap-16">
+    <!-- Article Card 1 -->
+    <article class="group">
+      <div class="flex flex-col md:flex-row gap-10 items-start">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-5">
+            <img class="w-7 h-7 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRDolysTTOptensxc3s4IJxx90F51X1xyecywsH0rYNYUjUtMMdvKnVzHdqRNygjcMUvuZxZSVPoVdE7Gc08GQPzFKSUp0dYLNcVbUmO2enMhzP_qT1julVMLgC3FiN8-IhkFWpexmtYKcEnspW_7WX6LaWUGjORDn_oOrT5RCvoiSsnO04cMlCECn_zR6T_GKGe8Boo-1kfAnKJ8DiWNalD8JXRJos8ICzIsVDn5rr2mqWHc0PSUfhfqrM94ZF-ACSdulSY-JuAs">
+            <span class="font-label text-sm font-bold text-on-surface">Julian Thorne</span>
+            <span class="text-stone-300">·</span>
+            <span class="font-label text-sm text-stone-400">Oct 12, 2023</span>
+          </div>
+          <h2
+            class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-5 group-hover:text-teal-900 transition-colors cursor-pointer">
+            The Architecture of Silence: Why Modern Design Needs Breathing Room
+          </h2>
+          <p class="font-body text-stone-600 text-lg md:text-xl line-clamp-3 mb-8 leading-relaxed">
+            In an era of constant digital stimulation, the most luxury asset in design isn't a feature, it's the space
+            between. We examine how minimalist principles from the Bauhaus era are finding a new resurgence in the 21st
+            century...
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <span
+                class="bg-surface-container text-stone-600 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider">Architecture</span>
+              <span class="font-label text-sm text-stone-400">8 min read</span>
+            </div>
+            <div class="flex items-center gap-5 text-stone-400">
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">bookmark_add</span></button>
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">do_not_disturb_on</span></button>
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">more_horiz</span></button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-64 lg:w-80 h-48 md:h-56 rounded-sm overflow-hidden shrink-0 order-first md:order-last shadow-sm">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSllPIzUiafhH0tiDz5sc0-9LJv5JETglwc9Nvm0dQO8OyHyNKJDxQzXtN6bm56YKXjJ5cyyUBEvA9s9DiYEO-S2RoaNd__w_ACnzyu27KNPsCMe9Y5rNVHFxXgziHuzy_XKuMtf7bGSx_3qsYUlSHJgds3aqyb5g4wb-9WnArgABDDUylDoV8J7ZbYM-z_gl2ZyM9fhZnunc3BHEmFVfEVFJ-kzjk6OWKHlw6n5rRpkkEmZHtU5pH9MCyz7fVCOF3xFbjhgIMVG0">
+        </div>
+      </div>
+    </article>
+    <!-- Article Card 2 -->
+    <article class="group">
+      <div class="flex flex-col md:flex-row gap-10 items-start">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-5">
+            <img class="w-7 h-7 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjKJIctWID_2-_xb1o9Z_Q6Hy-9VCejYws4JbAbqfoFmfdGrYfA5ffOy9INF1jTVN9_N7uFLLgj_Ez3a1PXGF0dkXUi0OjrVPDDCXp6GKR4NVWoAHUdUcNHtTBzVunkzjEZFjfiEAgTuqh_XQJmkkzdjTZfZaOWflNT02ueCmM46aZJRoY2YleYsrbntP_XktCo6n_l3JuFRnJo2-5_gzc2nOdo3uDBHE436mzJA8AGMzniXTz_wtBpJa64yiSrmhP9dYDsPEMsQQ">
+            <span class="font-label text-sm font-bold text-on-surface">Elena Vance</span>
+            <span class="text-stone-300">·</span>
+            <span class="font-label text-sm text-stone-400">Oct 10, 2023</span>
+          </div>
+          <h2
+            class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-5 group-hover:text-teal-900 transition-colors cursor-pointer">
+            Digital Antiquity: Bridging the Gap Between Tangible and Virtual Worlds
+          </h2>
+          <p class="font-body text-stone-600 text-lg md:text-xl line-clamp-3 mb-8 leading-relaxed">
+            As we spend more of our lives in meta-verses, the craving for the tactile increases. Designers are
+            responding by bringing organic textures, grit, and physical imperfections back into high-fidelity digital
+            interfaces...
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <span
+                class="bg-surface-container text-stone-600 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider">Technology</span>
+              <span class="font-label text-sm text-stone-400">12 min read</span>
+            </div>
+            <div class="flex items-center gap-5 text-stone-400">
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">bookmark_add</span></button>
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">do_not_disturb_on</span></button>
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">more_horiz</span></button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-64 lg:w-80 h-48 md:h-56 rounded-sm overflow-hidden shrink-0 order-first md:order-last shadow-sm">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSUUOXp9eSaV0ce042qhAkl4B6359DcfXdJGPeb1iPNDtJIed8N2zw7cySJKn5lP9NTY2NjkczwJB19DubRRyIyThUoiwl4LibO1P2bvGPIxCBxhu_5xNHB6z5RRlizjcN4LynX_DOJb3TYjCrDXLFNdj8oOa2vOXLGq6hrB-pfteofTopOQo1U2Nu19TMAMiVKdRDAJsFKWOOX8XWacC6dtEZeD2N-v76DmfD3-vmLikVL1wX861PGVK7nU-j7tzT28sKHyStC0I">
+        </div>
+      </div>
+    </article>
+    <!-- Article Card 3 -->
+    <article class="group">
+      <div class="flex flex-col md:flex-row gap-10 items-start">
+        <div class="flex-1">
+          <div class="flex items-center gap-3 mb-5">
+            <img class="w-7 h-7 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUTOmxvrQM4vavhuMROO1T6KDoqE6AU1RgDCBmC_fBGMSvwMyPPHO-KKp2mxy5wJftxRSsIaWd8kyuPOXi-OMn8Aor38PJPSKpsBGlw5dCtFWHAXWLaqaJNPcq5evQ058VX0IDd_3bu2VTvd6dcuVUIO3OrersHYr4GqVHb5BwNQwn9K0sQ7_CY-RD8lxy307R1jQ457XaHsyGtQ4AZo1yvdszLxqJTWS93Max-nQs4wjU5MR5YiVUn3RfJobykH9dtThJ04scrLk">
+            <span class="font-label text-sm font-bold text-on-surface">Markus Aurelio</span>
+            <span class="text-stone-300">·</span>
+            <span class="font-label text-sm text-stone-400">Oct 8, 2023</span>
+          </div>
+          <h2
+            class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-5 group-hover:text-teal-900 transition-colors cursor-pointer">
+            The Stoic Writer: Finding Flow in Chaos
+          </h2>
+          <p class="font-body text-stone-600 text-lg md:text-xl line-clamp-3 mb-8 leading-relaxed">
+            Writing is an act of defiance against entropy. When the world demands your attention every few seconds, the
+            deep work required for meaningful prose becomes a spiritual practice. Here is how I reclaim my focus...
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <span
+                class="bg-surface-container text-stone-600 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider">Philosophy</span>
+              <span class="font-label text-sm text-stone-400">6 min read</span>
+            </div>
+            <div class="flex items-center gap-5 text-stone-400">
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">bookmark_add</span></button>
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">do_not_disturb_on</span></button>
+              <button class="hover:text-primary transition-colors"><span
+                  class="material-symbols-outlined text-2xl">more_horiz</span></button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-64 lg:w-80 h-48 md:h-56 rounded-sm overflow-hidden shrink-0 order-first md:order-last shadow-sm">
+          <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpQzzbJn7buwU3TprGwOoGlJr7EaNE3hCn_w_oJsO5_ldNuDGMoWH3ypZjpfpZR7pKDQwMYA0MbI6shoac8vnbl-dpisbOzKrKrJwItfOIlTqjMPxoV1OjvRuGIOTvWXMW_UJeEGYlNOlje4nW3GdxHNglTwns5U0CnOR2scASipQ6KzmJ9IWQjXAmT6y8N-bEmGKrfrVR1Sqo8TA5CeBmG6WN21meLhBvqqx_DAbq2VxWpYb-L7Bb5saXLHdEro3antdbUf0RQZc">
+        </div>
+      </div>
+    </article>
+  </div>
+  <!-- Footer added to main feed -->
+  <footer class="mt-20 pt-8 border-t border-outline-variant/10">
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-[10px] text-stone-400 font-medium pb-8">
+      <a class="hover:text-stone-600" href="#">Help</a>
+      <a class="hover:text-stone-600" href="#">Status</a>
+      <a class="hover:text-stone-600" href="#">About</a>
+      <a class="hover:text-stone-600" href="#">Careers</a>
+      <a class="hover:text-stone-600" href="#">Privacy</a>
+      <a class="hover:text-stone-600" href="#">Terms</a>
+    </div>
+  </footer>
+</div>
