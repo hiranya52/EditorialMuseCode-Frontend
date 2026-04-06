@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { Article } from '../../../model/Article.model';
-import { ArticleCard } from '../article-card/article-card';
+import { ArticleCard } from "../article-card/article-card";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-feed',
-  imports: [ArticleCard],
+  imports: [ArticleCard, CommonModule],
   templateUrl: './feed.html',
   styleUrl: './feed.css',
 })
 export class Feed {
+
   articles: Article[] = [
     {
       authorName: 'Julian Thorne',

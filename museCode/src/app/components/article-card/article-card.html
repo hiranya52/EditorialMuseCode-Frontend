@@ -1,51 +1,47 @@
-<div class="flex flex-col gap-16">
-  <article *ngFor="let article of articles" class="group">
-    <div class="flex flex-col md:flex-row gap-10 items-start">
+<article>
+  <div class="flex flex-col md:flex-row gap-10 items-start">
 
-      <!-- Text -->
-      <div class="flex-1">
-        <div class="flex items-center gap-3 mb-5">
-          <img class="w-7 h-7 rounded-full object-cover"
-               [src]="article.authorImage">
+    <!-- Text -->
+    <div class="flex-1">
+      <div class="flex items-center gap-3 mb-5">
+        <img class="w-7 h-7 rounded-full object-cover" [src]="article.authorImage">
 
-          <span class="font-label text-sm font-bold text-on-surface">
-            {{ article.authorName }}
-          </span>
+        <span class="font-label text-sm font-bold text-on-surface">
+          {{ article.authorName }}
+        </span>
 
-          <span class="text-stone-300">·</span>
+        <span class="text-stone-300">·</span>
 
-          <span class="font-label text-sm text-stone-400">
-            {{ article.date }}
-          </span>
-        </div>
-
-        <h2 class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-5">
-          {{ article.title }}
-        </h2>
-
-        <p class="font-body text-stone-600 text-lg md:text-xl mb-8">
-          {{ article.description }}
-        </p>
-
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-4">
-            <span class="bg-surface-container px-4 py-1.5 rounded-full text-[11px] font-bold">
-              {{ article.category }}
-            </span>
-
-            <span class="text-sm text-stone-400">
-              {{ article.readTime }}
-            </span>
-          </div>
-        </div>
+        <span class="font-label text-sm text-stone-400">
+          {{ article.date }}
+        </span>
       </div>
 
-      <!-- Image -->
-      <div class="w-full md:w-64 lg:w-80 h-48 md:h-56 rounded-sm overflow-hidden">
-        <img class="w-full h-full object-cover"
-             [src]="article.articleImage">
-      </div>
+      <h2 class="font-headline text-3xl md:text-5xl text-primary leading-tight mb-5">
+        {{ article.title }}
+      </h2>
 
+      <p class="font-body text-stone-600 text-lg md:text-xl mb-8">
+        {{ article.description }}
+      </p>
+
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="bg-surface-container px-4 py-1.5 rounded-full text-[11px] font-bold">
+            {{ article.category }}
+          </span>
+
+          <span class="text-sm text-stone-400">
+            {{ article.readTime }}
+          </span>
+        </div>
+      </div>
     </div>
-  </article>
-</div>
+
+    <!-- Image -->
+    <div class="w-full md:w-64 lg:w-80 h-48 md:h-56 rounded-sm overflow-hidden">
+      <img class="w-full h-full object-cover" [src]="article.articleImage">
+    </div>
+
+  </div>
+</article>
