@@ -1,0 +1,41 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+}
+.serif-italic {
+  font-style: italic;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Reading progress bar from Design System */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 30%; /* Mock progress */
+  background-color: #476363; /* surface_tint */
+  z-index: 100;
+}
+
+/* Input styling from Design System */
+.editorial-input {
+  border: none;
+  border-bottom: 1px solid rgba(193, 200, 199, 0.2); /* outline_variant 20% */
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+.editorial-input:focus {
+  outline: none;
+  border-bottom-color: #032121; /* primary */
+  box-shadow: none;
+}
