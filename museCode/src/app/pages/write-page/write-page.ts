@@ -10,6 +10,20 @@ import { Editor } from "../../components/editor/editor";
 })
 export class WritePage {
 
-  
+  title: string = '';
+  content: string = '';
+  coverImage: string | null = null;
+
+  updateTitle(value: string) {
+    this.title = value;
+  }
+
+  updateContent(value: string) {
+    this.content = value;
+  }
+
+  updateCover(image: string) {
+    this.coverImage = image;
+  }
 
 }
