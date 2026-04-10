@@ -4,6 +4,7 @@ import { LogIn } from './pages/log-in/log-in';
 import { PersonalizeFeed } from './pages/personalize-feed/personalize-feed';
 import { LandingPage } from './pages/landing-page/landing-page';
 import { SignUp } from './pages/sign-up/sign-up';
+import { WritePage } from './pages/write-page/write-page';
 
 export const routes: Routes = [
 
@@ -26,6 +27,9 @@ export const routes: Routes = [
   {
     path: 'signUp',
     component: SignUp
+  },
+  {
+    path: 'new-story',
+    component: WritePage
   }
-
 ];
