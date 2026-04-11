@@ -16,6 +16,11 @@ export class Editor {
   @Output() contentChange = new EventEmitter<string>();
   @Output() coverChange = new EventEmitter<string>();
 
+  autoResize(el: HTMLTextAreaElement) {
+  el.style.height = 'auto';
+  el.style.height = el.scrollHeight + 'px';
+}
+
   onTitleChange(event: any) {
     this.titleChange.emit(event.target.value);
   }
