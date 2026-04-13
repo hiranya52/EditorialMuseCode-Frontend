@@ -1,64 +1,68 @@
 <!-- Left Sidebar Navigation -->
 <aside
-  class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-stone-50 flex flex-col py-6 px-4 gap-4 overflow-y-auto hidden md:flex border-r border-stone-200/20">
-  <div class="mb-2 px-2">
-    <h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-stone-400 font-bold">Library</h3>
-  </div>
-  <nav class="flex flex-col gap-1">
-    <a class="flex items-center gap-3 px-3 py-2 text-teal-950 font-semibold border-r-2 border-teal-900 bg-white/50 transition-all duration-200"
+  class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-stone-50 flex flex-col py-6 px-0 gap-4 overflow-y-auto hidden md:flex border-r border-stone-200/20">
+  <nav class="flex flex-col gap-1 px-4">
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
       href="#">
-      <span class="material-symbols-outlined text-xl">auto_stories</span>
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">home</span>
+      <span class="font-sans text-sm tracking-wide">Home</span>
+    </a>
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">person</span>
+      <span class="font-sans text-sm tracking-wide">Profile</span>
+    </a>
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">group</span>
+      <span class="font-sans text-sm tracking-wide">Followers</span>
+    </a>
+    <a class="relative flex items-center gap-3 px-3 py-2.5 text-teal-950 font-semibold bg-white shadow-sm rounded-lg nav-link-active transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform"
+        style="font-variation-settings: 'FILL' 1">auto_stories</span>
       <span class="font-sans text-sm tracking-wide">Library</span>
     </a>
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl">bookmark</span>
-      <span class="font-sans text-sm tracking-wide">Saved</span>
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">edit_note</span>
+      <span class="font-sans text-sm tracking-wide">Writing</span>
     </a>
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl">history</span>
-      <span class="font-sans text-sm tracking-wide">History</span>
-    </a>
-  </nav>
-  <div class="mt-6 mb-2 px-2">
-    <h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-stone-400 font-bold">Writing</h3>
-  </div>
-  <nav class="flex flex-col gap-1">
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 0;">edit_note</span>
-      <span class="font-sans text-sm tracking-wide">Drafts</span>
-    </a>
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl">description</span>
-      <span class="font-sans text-sm tracking-wide">Published</span>
-    </a>
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl">analytics</span>
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">query_stats</span>
       <span class="font-sans text-sm tracking-wide">Stats</span>
     </a>
   </nav>
-  <div class="mt-6 mb-2 px-2">
-    <h3 class="font-label text-[10px] uppercase tracking-[0.2em] text-stone-400 font-bold">Workspace</h3>
+  <div class="px-7 pt-4 border-t border-stone-200/50">
+    <span class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Preferences</span>
   </div>
-  <nav class="flex flex-col gap-1">
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl">group</span>
+  <nav class="flex flex-col gap-1 px-4">
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">group</span>
       <span class="font-sans text-sm tracking-wide">Following</span>
     </a>
-    <a class="flex items-center gap-3 px-3 py-2 text-stone-500 hover:bg-white/50 transition-all duration-200" href="#">
-      <span class="material-symbols-outlined text-xl">settings</span>
+    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+      href="#">
+      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">settings</span>
       <span class="font-sans text-sm tracking-wide">Settings</span>
     </a>
   </nav>
-  <div class="mt-auto p-4 bg-primary text-on-primary rounded-xl overflow-hidden relative group">
-    <div class="relative z-10">
-      <p class="font-label text-xs font-bold opacity-80 uppercase tracking-widest mb-1">Upgrade</p>
-      <p class="font-headline text-lg mb-3">Refine your craft</p>
-      <button
-        class="bg-on-primary text-primary px-4 py-2 rounded-sm text-xs font-bold hover:bg-primary-fixed transition-colors">Unlock
-        Pro</button>
-    </div>
-    <div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-500">
-      <span class="material-symbols-outlined text-8xl">ink_pen</span>
+  <div class="mt-auto px-4 pb-4">
+    <div
+      class="p-4 bg-primary text-on-primary rounded-xl overflow-hidden relative group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+      <div class="relative z-10">
+        <p class="font-label text-xs font-bold opacity-80 uppercase tracking-widest mb-1">Upgrade</p>
+        <p class="font-headline text-lg mb-3">Refine your craft</p>
+        <button
+          class="bg-on-primary text-primary px-4 py-2 rounded-sm text-xs font-bold hover:bg-primary-fixed transition-colors">Unlock
+          Pro</button>
+      </div>
+      <div
+        class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-125 group-hover:opacity-20 transition-all duration-500">
+        <span class="material-symbols-outlined text-8xl">ink_pen</span>
+      </div>
     </div>
   </div>
 </aside>
