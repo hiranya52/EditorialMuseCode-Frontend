@@ -4,7 +4,7 @@ import { Editor } from "../../components/editor/editor";
 
 @Component({
   selector: 'app-write-page',
-  imports: [Navbar, Editor],
+  imports: [Editor],
   templateUrl: './write-page.html',
   styleUrl: './write-page.css',
 })
