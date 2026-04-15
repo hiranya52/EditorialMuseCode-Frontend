@@ -6,6 +6,7 @@ import { LandingPage } from './pages/landing-page/landing-page';
 import { SignUp } from './pages/sign-up/sign-up';
 import { WritePage } from './pages/write-page/write-page';
 import { Feed } from './components/feed/feed';
+import { UserProfile } from './components/user-profile/user-profile';
 
 export const routes: Routes = [
   // {
@@ -55,8 +56,8 @@ export const routes: Routes = [
         component: Feed
       },
       {
-        path: 'onboarding/personalize-feed',
-        component: PersonalizeFeed
+        path: 'profile',
+        component: UserProfile
       },
       {
         path: 'new-story',
