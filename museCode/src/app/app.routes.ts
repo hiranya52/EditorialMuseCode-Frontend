@@ -51,22 +51,9 @@ export const routes: Routes = [
     path: 'app',
     component: MainPage,
     children: [
-      {
-        path: 'home',
-        component: Feed
-      },
-      {
-        path: 'profile',
-        component: UserProfile
-      },
-      {
-        path: 'new-story',
-        component: WritePage
-      },
-      {
-        path: '',
-        redirectTo: 'home', pathMatch: 'full'
-      },
+      { path: 'home', component: Feed },
+    { path: 'profile', component: UserProfile },
+    { path: 'new-story', component: WritePage },
     ],
   },
 ];
