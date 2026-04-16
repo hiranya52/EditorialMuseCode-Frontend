@@ -1,1 +1,62 @@
-<p>edit-profile works!</p>
+<!-- Glassmorphism Card Container -->
+<div
+  class="w-full max-w-2xl bg-white/40 dark:bg-stone-900/40 backdrop-blur-2xl p-8 md:p-12 rounded-xl shadow-[0_20px_40px_rgba(28,27,27,0.06)] ring-1 ring-white/50 dark:ring-stone-700/30">
+  <header class="mb-10 text-center">
+    <h1 class="font-headline text-4xl md:text-5xl text-primary dark:text-stone-100 italic tracking-tight mb-2">Edit Your
+      Profile</h1>
+    <p class="text-stone-500 text-sm font-body">Craft how the literary world perceives your voice.</p>
+  </header>
+  <form class="space-y-8">
+    <!-- Profile Picture Upload -->
+    <div class="flex flex-col items-center gap-4">
+      <div class="relative group">
+        <div
+          class="w-32 h-32 rounded-full overflow-hidden ring-4 ring-white/80 dark:ring-stone-800/80 shadow-lg transition-transform group-hover:scale-105 duration-500">
+          <img alt="User profile preview" class="w-full h-full object-cover"
+            data-alt="close-up portrait of a professional woman with a warm smile in natural outdoor lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWjtCpzcsIKLGvRgJGpkqvnhdoi5AtA0ao2J0ugA5gUhxN8jCVzN9RCzmJoPw-UkiDtNgYBlDv-qGhFApsVPOMcZ2XDCkTUCUDn11ZXb7tSg4PFhfhN_-ln3qp5uSqcVzgNkJGjl-_EKReG7G0AU6hfuNAOVZMdGPxtfVa6O-Z56HrQNlaPbajyiQ6XZ00csHZo7aN1Zkr4woeDJ4onbb4F3Oyv6U5HP5DbZqPS3S5ESdsBbN-qtHjHO8fkXeOC4CFOlcoGdHFxes" />
+        </div>
+        <button
+          class="absolute bottom-1 right-1 bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary-container transition-colors flex items-center justify-center border-2 border-white dark:border-stone-900"
+          type="button">
+          <span class="material-symbols-outlined text-sm" data-icon="photo_camera">photo_camera</span>
+        </button>
+      </div>
+      <span class="font-label text-[10px] uppercase tracking-widest text-stone-400">Upload new image</span>
+    </div>
+    <!-- Input Fields -->
+    <div class="space-y-10">
+      <!-- Display Name -->
+      <div class="relative">
+        <label class="font-label text-[10px] uppercase tracking-[0.15em] text-stone-500 mb-1 block"
+          for="display-name">Display Name</label>
+        <input
+          class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body text-lg text-primary dark:text-stone-100 focus:ring-0 focus:border-primary transition-colors placeholder:text-stone-300"
+          id="display-name" name="display-name" placeholder="Enter your pen name..." type="text"
+          value="Evelyn Harper" />
+      </div>
+      <!-- Bio -->
+      <div class="relative">
+        <label class="font-label text-[10px] uppercase tracking-[0.15em] text-stone-500 mb-1 block" for="bio">About /
+          Short Bio</label>
+        <textarea
+          class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 font-body text-base leading-relaxed text-on-surface-variant dark:text-stone-300 focus:ring-0 focus:border-primary transition-colors resize-none placeholder:text-stone-300"
+          id="bio" name="bio" placeholder="Tell us about your literary journey..."
+          rows="4">Crafting narratives at the intersection of modern culture and traditional journalism. Senior Editor at The Narrative Slate and a coffee enthusiast.</textarea>
+      </div>
+    </div>
+    <!-- Action Buttons -->
+    <div class="flex flex-col md:flex-row items-center gap-4 pt-4">
+      <button
+        class="w-full md:flex-1 py-4 bg-primary text-on-primary text-xs font-label uppercase tracking-[0.2em] hover:bg-primary-container transition-all rounded-sm shadow-md"
+        type="submit">
+        Save Changes
+      </button>
+      <button
+        class="w-full md:w-auto px-10 py-4 bg-transparent text-primary dark:text-stone-300 text-xs font-label uppercase tracking-[0.2em] hover:bg-stone-200/20 transition-all rounded-sm"
+        type="button">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
