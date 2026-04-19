@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { ArticleCard } from "../article-card/article-card";
 @Component({
   selector: 'app-user-profile',
-  imports: [],
+  imports: [ArticleCard],
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.css',
 })
