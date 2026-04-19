@@ -56,7 +56,7 @@ export const routes: Routes = [
     path: 'app',
     component: MainPage,
     children: [
-      { path: 'home', component: Feed },
+    { path: 'home', component: Feed },
     { path: 'profile', component: UserProfile },
     { path: 'new-story', component: WritePage },
     ],
