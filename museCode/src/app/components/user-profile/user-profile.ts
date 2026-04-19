@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class UserProfile {
 
+  showEdit = false;
+
+  openEdit() {
+    this.showEdit = true;
+  }
 
 }
