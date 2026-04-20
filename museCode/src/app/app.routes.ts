@@ -10,30 +10,6 @@ import { UserProfile } from './components/user-profile/user-profile';
 import { EditProfile } from './components/edit-profile/edit-profile';
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: LandingPage
-  // },
-  // {
-  //   path: 'auth/login',
-  //   component: LogIn
-  // },
-  // {
-  //   path: 'onboarding/personalize-feed',
-  //   component: PersonalizeFeed
-  // },
-  // {
-  //   path: 'app/home',
-  //   component: MainPage
-  // },
-  // {
-  //   path: 'signUp',
-  //   component: SignUp
-  // },
-  // {
-  //   path: 'new-story',
-  //   component: WritePage
-  // }
 
   // 🌍 Public Pages
   {
@@ -48,17 +24,26 @@ export const routes: Routes = [
     component: SignUp
   },
   {
-    path: 'editProfile',
-    component: EditProfile
+    path: 'new-story',
+    component: WritePage
   },
   // ⚙️ App Layout (Protected Area)
   {
     path: 'app',
     component: MainPage,
     children: [
-    { path: 'home', component: Feed },
-    { path: 'profile', component: UserProfile },
-    { path: 'new-story', component: WritePage },
+      {
+        path: 'home',
+        component: Feed
+      },
+      {
+        path: 'profile',
+        component: UserProfile
+      },
+      // {
+      //   path: 'new-story',
+      //   component: WritePage
+      // },
     ],
   },
 ];
