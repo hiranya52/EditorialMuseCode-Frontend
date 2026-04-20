@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-edit-profile',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './edit-profile.html',
   styleUrl: './edit-profile.css',
 })
-export class EditProfile {}
+export class EditProfile {
+
+  @Output() close = new EventEmitter<void>();
+
+  closeModal() {
+    this.close.emit();
+  }
+
+}

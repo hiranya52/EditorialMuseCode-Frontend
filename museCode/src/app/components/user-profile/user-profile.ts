@@ -15,4 +15,8 @@ export class UserProfile {
     this.showEdit = true;
   }
 
+  closeEdit() {
+    this.showEdit = false;
+  }
+
 }

@@ -171,6 +171,6 @@
 <!-- </div> -->
 
 
-<div *ngIf="showEdit" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
-  <app-edit-profile></app-edit-profile>
+<div *ngIf="showEdit"  class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+  <app-edit-profile (close)="closeEdit()"></app-edit-profile>
 </div>
