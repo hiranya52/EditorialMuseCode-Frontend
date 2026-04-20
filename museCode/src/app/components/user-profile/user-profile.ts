@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ArticleCard } from "../article-card/article-card";
+import { EditProfile } from "../edit-profile/edit-profile";
 @Component({
   selector: 'app-user-profile',
-  imports: [ArticleCard, CommonModule],
+  imports: [CommonModule, EditProfile],
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.css',
 })
