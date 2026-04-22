@@ -6,6 +6,7 @@ import { SignUp } from './pages/sign-up/sign-up';
 import { WritePage } from './pages/write-page/write-page';
 import { Feed } from './components/feed/feed';
 import { UserProfile } from './components/user-profile/user-profile';
+import { Followers } from './components/followers/followers';
 
 export const routes: Routes = [
 
@@ -37,6 +38,10 @@ export const routes: Routes = [
       {
         path: 'profile',
         component: UserProfile
+      },
+      {
+        path: 'followers',
+        component: Followers
       }
     ],
   },
