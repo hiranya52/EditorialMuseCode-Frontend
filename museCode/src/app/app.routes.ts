@@ -1,13 +1,11 @@
 import { Routes } from '@angular/router';
 import { MainPage } from './pages/main-page/main-page';
 import { LogIn } from './pages/log-in/log-in';
-import { PersonalizeFeed } from './pages/personalize-feed/personalize-feed';
 import { LandingPage } from './pages/landing-page/landing-page';
 import { SignUp } from './pages/sign-up/sign-up';
 import { WritePage } from './pages/write-page/write-page';
 import { Feed } from './components/feed/feed';
 import { UserProfile } from './components/user-profile/user-profile';
-import { EditProfile } from './components/edit-profile/edit-profile';
 
 export const routes: Routes = [
 
@@ -39,11 +37,7 @@ export const routes: Routes = [
       {
         path: 'profile',
         component: UserProfile
-      },
-      // {
-      //   path: 'new-story',
-      //   component: WritePage
-      // },
+      }
     ],
   },
 ];
