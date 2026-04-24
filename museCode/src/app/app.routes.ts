@@ -7,6 +7,7 @@ import { WritePage } from './pages/write-page/write-page';
 import { Feed } from './components/feed/feed';
 import { UserProfile } from './components/user-profile/user-profile';
 import { Followers } from './components/followers/followers';
+import { ArticleView } from './components/article-view/article-view';
 
 export const routes: Routes = [
 
@@ -42,6 +43,10 @@ export const routes: Routes = [
       {
         path: 'followers',
         component: Followers
+      },
+      {
+        path: 'article-view',
+        component: ArticleView
       }
     ],
   },
