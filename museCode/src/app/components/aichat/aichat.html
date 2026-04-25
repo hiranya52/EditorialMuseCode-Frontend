@@ -1,5 +1,5 @@
 <aside
-  class="fixed right-0 top-0 h-screen w-100 border-l border-outline-variant/10 bg-surface-bright/40 backdrop-blur-3xl z-40 flex flex-col">
+  class="fixed right-0 top-0 h-screen w-100 border-l border-outline-variant/10 bg-surface-bright/40 backdrop-blur-3xl z-40 flex flex-col bg-white">
 
   <!-- INNER CONTAINER -->
   <div class="flex flex-col h-full p-8 pt-24">
@@ -12,70 +12,66 @@
           Muse Intelligence
         </h2>
       </div>
-
-      <!-- TABS -->
-      <div class="flex border-b border-outline-variant/20 mb-6">
-        <button
-          class="flex-1 pb-3 text-xs font-label font-bold uppercase tracking-widest text-primary border-b-2 border-primary">
-          Summarize
-        </button>
-        <button
-          class="flex-1 pb-3 text-xs font-label font-bold uppercase tracking-widest text-outline hover:text-on-surface-variant transition-colors">
-          Ask AI
-        </button>
-      </div>
     </div>
 
-    <!-- SCROLLABLE CONTENT -->
-    <div class="flex-1 overflow-y-auto space-y-6 pr-2">
-
-      <!-- CARD -->
-      <div class="p-5 bg-surface-container-lowest rounded-md shadow-sm">
-        <p class="text-[10px] font-label text-outline uppercase tracking-widest mb-4">
-          Core Insights
-        </p>
-
-        <ul class="space-y-3 text-sm text-on-surface-variant leading-relaxed">
-          <li class="flex gap-3">
-            <span class="text-primary mt-1">•</span>
-            Silence is framed as an active architectural element rather than an absence.
-          </li>
-          <li class="flex gap-3">
-            <span class="text-primary mt-1">•</span>
-            Digital friction is identified as the primary barrier to deep thought.
-          </li>
-        </ul>
+    <div class="flex-1 overflow-y-auto px-8 py-4 no-scrollbar space-y-8">
+      <!-- Initial State: AI Greeting -->
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">AI Companion</span>
+        </div>
+        <div class="max-w-[85%] font-body text-lg leading-relaxed text-primary">
+          Good evening. I've analyzed the nuances of "The Ghost in the Machine." How would you like to explore this
+          discourse further?
+        </div>
       </div>
-
-      <!-- CTA -->
-      <button
-        class="w-full py-3 bg-primary text-on-primary text-xs font-bold uppercase tracking-widest rounded-md flex items-center justify-center gap-2 hover:opacity-95 transition shadow-md">
-        <span class="material-symbols-outlined text-sm">bolt</span>
-        Generate Full Summary
-      </button>
-
-    </div>
-
-    <!-- INPUT AREA -->
-    <div class="pt-6 border-t border-outline-variant/10 mt-6">
-
-      <div class="relative">
-        <input
-          type="text"
-          placeholder="Inquire about the text..."
-          class="w-full bg-surface-container-low rounded-md py-3 pl-4 pr-12 text-sm font-body placeholder:text-outline/60 focus:outline-none focus:ring-2 focus:ring-primary/30"
-        />
-
+      <!-- Sample Question Chips -->
+      <div class="flex flex-col gap-3 py-6">
+        <p class="font-label text-xs text-outline mb-1">SUGGESTED DISCOURSES</p>
         <button
-          class="absolute right-3 top-1/2 -translate-y-1/2 text-primary hover:scale-110 transition-transform">
-          <span class="material-symbols-outlined">send</span>
+          class="w-full text-left p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/30 hover:bg-white transition-all shadow-sm group">
+          <div class="flex items-center justify-between">
+            <span class="font-display italic text-lg text-primary">Summarize this article</span>
+            <span
+              class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+          </div>
+        </button>
+        <button
+          class="w-full text-left p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/30 hover:bg-white transition-all shadow-sm group">
+          <div class="flex items-center justify-between">
+            <span class="font-display italic text-lg text-primary">What are the key takeaways?</span>
+            <span
+              class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+          </div>
+        </button>
+        <button
+          class="w-full text-left p-5 rounded-lg bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/30 hover:bg-white transition-all shadow-sm group">
+          <div class="flex items-center justify-between">
+            <span class="font-display italic text-lg text-primary">Explain the main thesis</span>
+            <span
+              class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">arrow_forward</span>
+          </div>
         </button>
       </div>
-
-      <p class="text-[10px] text-center text-outline/50 mt-4 font-label uppercase tracking-widest">
-        Powered by Muse Atelier AI
-      </p>
-
+      <!-- Example Message Bubble (User) -->
+      <div class="flex flex-col items-end gap-2">
+        <div
+          class="max-border bg-primary-container text-on-primary-container px-6 py-4 rounded-2xl rounded-tr-none font-body text-base">
+          Can you elaborate on the "silent notes" metaphor?
+        </div>
+      </div>
+      <!-- Example Message Bubble (AI) -->
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="font-label text-[0.6875rem] tracking-widest text-outline uppercase">AI Companion</span>
+        </div>
+        <div class="max-w-[90%] font-body text-lg leading-relaxed text-primary">
+          Thorne uses the musical metaphor to argue that consciousness isn't a "thing" you can find under a microscope.
+          It's an <span class="italic text-on-primary-fixed-variant bg-primary-fixed/30 px-1">emergent
+            property</span>—like harmony arising from individual vibrations. It suggests that artificial consciousness
+          might require a similar "temporal rhythm" rather than just massive data processing.
+        </div>
+      </div>
     </div>
 
   </div>
