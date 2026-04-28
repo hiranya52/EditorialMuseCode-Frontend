@@ -8,6 +8,7 @@ import { Feed } from './components/feed/feed';
 import { UserProfile } from './components/user-profile/user-profile';
 import { Followers } from './components/followers/followers';
 import { ArticleView } from './components/article-view/article-view';
+import { PersonalizeFeed } from './pages/personalize-feed/personalize-feed';
 
 export const routes: Routes = [
 
@@ -26,6 +27,10 @@ export const routes: Routes = [
   {
     path: 'new-story',
     component: WritePage
+  },
+  {
+    path: 'personalize-feed',
+    component: PersonalizeFeed
   },
   // ⚙️ App Layout (Protected Area)
   {
