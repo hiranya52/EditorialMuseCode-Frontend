@@ -53,7 +53,7 @@
         </div>
 
         <!-- Form -->
-        <form class="space-y-6" onsubmit="return false;">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="space-y-6" onsubmit="return false;">
 
           <!-- Full Name -->
           <div class="space-y-1">

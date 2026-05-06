@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './sign-up.html',
   styleUrl: './sign-up.css',
 })
@@ -14,6 +14,9 @@ export class SignUp {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  
+
+
+
+
 
 }
