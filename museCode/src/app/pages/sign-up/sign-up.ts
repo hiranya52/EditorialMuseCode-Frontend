@@ -32,9 +32,7 @@ export class SignUp {
     this.email = this.signupForm.value.email;
     this.password = this.signupForm.value.password;
 
-    console.log(this.name);
-    console.log(this.email);
-    console.log(this.password);
+    
 
 
   }
