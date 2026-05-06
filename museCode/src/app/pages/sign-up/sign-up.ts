@@ -15,6 +15,11 @@ export class SignUp {
   constructor(private formBuilder: FormBuilder) {}
 
 
+  onSubmit(){
+
+    
+
+  }
 
 
 
