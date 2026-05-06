@@ -4,5 +4,8 @@ const BASE_URL = environment.apiBaseUrl;
 
 export const API_ENDPOINTS = {
 
+  user: {
+    registerUser: `${BASE_URL}/auth/register`
+  }
 
 }
