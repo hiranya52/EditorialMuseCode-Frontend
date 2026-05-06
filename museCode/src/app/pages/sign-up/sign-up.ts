@@ -41,7 +41,7 @@ export class SignUp {
       password: this.signupForm.value.password
     };
 
-    console.log('Register Object:', registerData);
+    
 
 
   }
