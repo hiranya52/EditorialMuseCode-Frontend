@@ -4,6 +4,5 @@ const BASE_URL = environment.apiBaseUrl;
 
 export const API_ENDPOINTS = {
 
-  
 
 }
