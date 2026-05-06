@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { User } from '../../service/user/user';
+import { Register } from '../../../model/UserRegister.model';
 
 @Component({
   selector: 'app-sign-up',
@@ -36,6 +37,11 @@ export class SignUp {
     this.password = this.signupForm.value.password;
 
 
+    const registerData: Register = {
+      fullName: this.signupForm.value.fullName,
+      email: this.signupForm.value.email,
+      password: this.signupForm.value.password
+    };
 
 
   }
