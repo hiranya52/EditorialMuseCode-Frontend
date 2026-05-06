@@ -29,19 +29,19 @@ export class SignUp {
 
   }
 
-
   onSubmit(){
 
     this.name = this.signupForm.value.name;
     this.email = this.signupForm.value.email;
     this.password = this.signupForm.value.password;
 
-
     const registerData: Register = {
-      fullName: this.signupForm.value.fullName,
+      name: this.signupForm.value.name,
       email: this.signupForm.value.email,
       password: this.signupForm.value.password
     };
+
+    console.log('Register Object:', registerData);
 
 
   }
