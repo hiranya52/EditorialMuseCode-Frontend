@@ -12,12 +12,20 @@ export class SignUp {
   signupForm!: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {
+
+    this.signupForm = this.formBuilder.group({
+      name: [''],
+      email: [''],
+      password: ['']
+    });
+
+  }
 
 
   onSubmit(){
 
-    
+
 
   }
 
