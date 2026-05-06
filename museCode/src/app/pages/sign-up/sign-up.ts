@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { User } from '../../service/user/user';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,6 +9,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './sign-up.css',
 })
 export class SignUp {
+
+  private userService = inject(User);
 
   signupForm!: FormGroup;
 
@@ -32,7 +35,7 @@ export class SignUp {
     this.email = this.signupForm.value.email;
     this.password = this.signupForm.value.password;
 
-    
+
 
 
   }
