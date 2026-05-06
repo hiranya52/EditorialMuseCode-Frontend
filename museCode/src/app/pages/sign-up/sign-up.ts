@@ -11,6 +11,9 @@ export class SignUp {
 
   signupForm!: FormGroup;
 
+  name!:string;
+  email!:string;
+  password!:string;
 
   constructor(private formBuilder: FormBuilder) {
 
@@ -25,6 +28,13 @@ export class SignUp {
 
   onSubmit(){
 
+    this.name = this.signupForm.value.name;
+    this.email = this.signupForm.value.email;
+    this.password = this.signupForm.value.password;
+
+    console.log(this.name);
+    console.log(this.email);
+    console.log(this.password);
 
 
   }
