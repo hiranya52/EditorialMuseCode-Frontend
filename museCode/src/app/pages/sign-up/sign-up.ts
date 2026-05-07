@@ -1,6 +1,6 @@
+import { User } from './../../service/user/user';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { User } from '../../service/user/user';
 import { Register } from '../../../model/UserRegister.model';
 
 @Component({
@@ -31,17 +31,11 @@ export class SignUp {
 
   onSubmit(){
 
-    this.name = this.signupForm.value.name;
-    this.email = this.signupForm.value.email;
-    this.password = this.signupForm.value.password;
+    const registerData: Register = this.signupForm.value;
 
-    const registerData: Register = {
-      name: this.signupForm.value.name,
-      email: this.signupForm.value.email,
-      password: this.signupForm.value.password
-    };
-
-    
+    this.userService.registerUser(registerData).subscribe((res) => {
+      console.log(res);
+    });
 
 
   }
