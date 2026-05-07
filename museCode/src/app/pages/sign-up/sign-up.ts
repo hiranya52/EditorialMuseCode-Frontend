@@ -22,7 +22,7 @@ export class SignUp {
   constructor(private formBuilder: FormBuilder) {
 
     this.signupForm = this.formBuilder.group({
-      name: [''],
+      fullName: [''],
       email: [''],
       password: ['']
     });
@@ -39,8 +39,6 @@ export class SignUp {
 
 
   }
-
-
 
 
 }
