@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, ɵInternalFormsSharedModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from '../../service/user/user';
 
 @Component({
   selector: 'app-log-in',
@@ -9,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './log-in.css',
 })
 export class LogIn {
+
+  private userService = inject(User);
 
     logInForm!: FormGroup;
 
@@ -36,6 +39,8 @@ export class LogIn {
   onSubmit(){
 
     const logInData: LogIn = this.logInForm.value
+
+
 
   }
 
