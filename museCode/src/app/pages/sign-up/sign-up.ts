@@ -1,7 +1,7 @@
 import { User } from './../../service/user/user';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Register } from '../../../model/UserRegister.model';
+import { Register } from '../../../model/Register.model';
 
 @Component({
   selector: 'app-sign-up',

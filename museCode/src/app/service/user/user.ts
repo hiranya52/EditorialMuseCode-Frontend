@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { API_ENDPOINTS } from '../../../core/api/api-endpoints';
-import { Register } from '../../../model/UserRegister.model';
+import { Register } from '../../../model/Register.model';
 
 @Injectable({
   providedIn: 'root',
