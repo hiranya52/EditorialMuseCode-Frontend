@@ -40,7 +40,10 @@ export class LogIn {
 
     const logInData: LogIn = this.logInForm.value
 
+    this.userService.logIn(logInData).subscribe((res) =>{
+      console.log(res);
 
+    });
 
   }
 
