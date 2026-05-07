@@ -1,28 +1,28 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ɵInternalFormsSharedModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, ɵInternalFormsSharedModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-log-in',
-  imports: [ɵInternalFormsSharedModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './log-in.html',
   styleUrl: './log-in.css',
 })
 export class LogIn {
 
-  logInForm!: FormGroup;
+    logInForm!: FormGroup;
 
-  email!:string;
-  password!:string;
+    email!:string;
+    password!:string;
 
-  constructor(private formBuider: FormBuilder, private router: Router) {
+    constructor(private formBuider: FormBuilder, private router: Router) {
 
-    this.logInForm = this.formBuider.group({
-      email: [''],
-      password: ['']
-    });
+      this.logInForm = this.formBuider.group({
+        email: [''],
+        password: ['']
+      });
 
-  }
+    }
 
   goToFeed(){
     this.router.navigate(['/onboarding/personalize-feed']);
