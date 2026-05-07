@@ -15,7 +15,7 @@ export class SignUp {
 
   signupForm!: FormGroup;
 
-  name!:string;
+  fullName!:string;
   email!:string;
   password!:string;
 
