@@ -33,7 +33,11 @@ export class LogIn {
   }
 
 
-  onSubmit(){}
+  onSubmit(){
+
+    const logInData: LogIn = this.logInForm.value
+
+  }
 
 
 }
