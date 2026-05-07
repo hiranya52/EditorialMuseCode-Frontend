@@ -12,7 +12,7 @@ export class User {
   constructor(private http: HttpClient) { }
 
   registerUser(userObj : Register): Observable<User> {
-    return this.http.post<User>(API_ENDPOINTS.user.registerUser, userObj);
+    return this.http.post<User>(API_ENDPOINTS.user.register, userObj);
   }
 
 }
