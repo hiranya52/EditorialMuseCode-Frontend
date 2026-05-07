@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,7 +10,19 @@ import { Router } from '@angular/router';
 })
 export class LogIn {
 
-  constructor(private router: Router) {}
+  logInForm!: FormGroup;
+
+  email!:string;
+  password!:string;
+
+  constructor(private formBuider: FormBuilder, private router: Router) {
+
+    this.logInForm = this.formBuider.group({
+      email: [''],
+      password: ['']
+    });
+
+  }
 
   goToFeed(){
     this.router.navigate(['/onboarding/personalize-feed']);
