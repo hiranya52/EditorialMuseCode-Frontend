@@ -16,7 +16,9 @@ export class User {
     return this.http.post<Register>(API_ENDPOINTS.user.register, userObj);
   }
 
-  
+  logIn(userObj : LogIn): Observable<LogIn> {
+    return this.http.post<LogIn>(API_ENDPOINTS.user.LogIn, userObj);
+  }
 
 
 
