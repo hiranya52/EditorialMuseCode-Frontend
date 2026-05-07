@@ -1,3 +1,4 @@
+import { LogIn } from './../../pages/log-in/log-in';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -11,8 +12,9 @@ export class User {
 
   constructor(private http: HttpClient) { }
 
-  registerUser(userObj : Register): Observable<User> {
+  register(userObj : Register): Observable<User> {
     return this.http.post<User>(API_ENDPOINTS.user.register, userObj);
   }
+
 
 }

@@ -33,7 +33,7 @@ export class SignUp {
 
     const registerData: Register = this.signupForm.value;
 
-    this.userService.registerUser(registerData).subscribe((res) => {
+    this.userService.register(registerData).subscribe((res) => {
       console.log(res);
     });
 
