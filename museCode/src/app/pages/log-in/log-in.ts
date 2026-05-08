@@ -42,7 +42,6 @@ export class LogIn {
 
     this.userService.logIn(logInData).subscribe((res) =>{
       console.log(res);
-
     });
 
   }

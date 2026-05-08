@@ -16,7 +16,7 @@
           href="#">About</a>
       </div>
       <div>
-        <button
+        <button (click)="goToLogIn()"
           class="bg-primary text-on-primary px-6 py-2.5 rounded-sm font-label text-xs uppercase tracking-widest hover:opacity-90 transition-opacity">
           Get Started
         </button>
@@ -43,7 +43,7 @@
             class="bg-primary text-on-primary px-8 py-4 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all shadow-sm">
             Get Started
           </button>
-          <button
+          <button (click)="goToLogIn()"
             class="text-primary font-label text-sm uppercase tracking-widest flex items-center gap-2 group hover:gap-3 transition-all">
             Start Reading
             <span class="material-symbols-outlined text-base">arrow_forward</span>
