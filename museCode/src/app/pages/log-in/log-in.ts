@@ -1,5 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, ɵInternalFormsSharedModule } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  ɵInternalFormsSharedModule,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../service/user/user';
 
@@ -10,37 +15,35 @@ import { User } from '../../service/user/user';
   styleUrl: './log-in.css',
 })
 export class LogIn {
-
   private userService = inject(User);
 
   message: string = '';
 
-    logInForm!: FormGroup;
+  logInForm!: FormGroup;
 
-    email!:string;
-    password!:string;
+  email!: string;
+  password!: string;
 
-    constructor(private formBuider: FormBuilder, private router: Router) {
+  constructor(
+    private formBuider: FormBuilder,
+    private router: Router,
+  ) {
+    this.logInForm = this.formBuider.group({
+      email: [''],
+      password: [''],
+    });
+  }
 
-      this.logInForm = this.formBuider.group({
-        email: [''],
-        password: ['']
-      });
-
-    }
-
-  goToFeed(){
+  goToFeed() {
     this.router.navigate(['/onboarding/personalize-feed']);
   }
 
-  goToSignUp(){
+  goToSignUp() {
     this.router.navigate(['/signUp']);
   }
 
-
-  onSubmit(){
-
-    const logInData: LogIn = this.logInForm.value
+  onSubmit() {
+    const logInData: LogIn = this.logInForm.value;
 
     // this.userService.logIn(logInData).subscribe((res) =>{
     //   console.log(res);
@@ -48,18 +51,14 @@ export class LogIn {
     // });
 
     this.userService.logIn(logInData).subscribe({
-
-    next: (res: any) => {
-      this.message = res.toString();
-    },
-
-    error: (err) => {
-      this.message = err.error;
-    }
-
-  });
-
+      next: (res: any) => {
+        if (res === 'User not found' || res === 'Invalid password') {
+          this.message = res;
+        } else {
+          this.message = 'Login Success';
+          localStorage.setItem('token', res);
+        }
+      },
+    });
   }
-
-
 }
