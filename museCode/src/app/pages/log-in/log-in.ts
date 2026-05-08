@@ -13,6 +13,8 @@ export class LogIn {
 
   private userService = inject(User);
 
+  message: string = '';
+
     logInForm!: FormGroup;
 
     email!:string;
@@ -40,9 +42,22 @@ export class LogIn {
 
     const logInData: LogIn = this.logInForm.value
 
-    this.userService.logIn(logInData).subscribe((res) =>{
-      console.log(res);
-    });
+    // this.userService.logIn(logInData).subscribe((res) =>{
+    //   console.log(res);
+
+    // });
+
+    this.userService.logIn(logInData).subscribe({
+
+    next: (res: any) => {
+      this.message = res.toString();
+    },
+
+    error: (err) => {
+      this.message = err.error;
+    }
+
+  });
 
   }
 
