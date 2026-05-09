@@ -1,11 +1,10 @@
-<div class="bg-surface text-on-surface font-body h-screen w-full overflow-hidden flex items-center justify-center relative">
+<div
+  class="bg-surface text-on-surface font-body h-screen w-full overflow-hidden flex items-center justify-center relative">
 
-    <!-- 🌄 Background Image Layer -->
-  <img
-    class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[0.2] z-0"
+  <!-- 🌄 Background Image Layer -->
+  <img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale-[0.2] z-0"
     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm3ojEAB-nPrBl1kQCHgQwTXty8UUor_a4OxGFJYaebeoqsdPazVW62cJGIsMHt4Y3gIgxgYl8APn22C_2Wq-ZtCytwVeK3CMg21s9uyjl2hEQyiy_ZeH9924tlEvXfXhg7JP_s_oG0D8C_xqP3vAQ2Gy2xzSDV4hZoL3fR2UwhKWYHSbjjSTz7U4emX7pattW8KR27DFRBg5CSLXPL_Gi_0Z2-nJAj3M6aD1ihgs7Xf7C4GaDMQJdoreiUDkX_cgsp-sgif61tJw"
-    alt="background"
-  />
+    alt="background" />
 
   <!-- Background Decor -->
   <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -38,8 +37,15 @@
               style="font-variation-settings: 'FILL' 1;">check_circle</span>
           </button>
           <!-- Inactive Categories -->
-          <button
-            class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Programming</button>
+          <button (click)="toggleCategory()" [ngClass]="isSelected ? selectedClass : normalClass">
+            <span class="font-label text-sm">Programming</span>
+
+            @if (isSelected) {
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">
+              check_circle
+            </span>
+            }
+          </button>
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Artificial
             Intelligence</button>
