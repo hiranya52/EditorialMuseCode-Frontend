@@ -1,10 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  ɵInternalFormsSharedModule,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../service/user/user';
 
@@ -44,11 +39,6 @@ export class LogIn {
 
   onSubmit() {
     const logInData: LogIn = this.logInForm.value;
-
-    // this.userService.logIn(logInData).subscribe((res) =>{
-    //   console.log(res);
-
-    // });
 
     this.userService.logIn(logInData).subscribe({
       next: (res: any) => {
