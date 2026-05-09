@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class PersonalizeFeed {
 
-  isSelected = false;
+  selectedCategories: string[] = [];
 
 normalClass =
   'font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200';
@@ -17,8 +17,18 @@ normalClass =
 selectedClass =
   'group relative px-6 py-3 rounded-full border-2 border-primary-container bg-surface-container-lowest text-primary font-medium transition-all duration-300 shadow-[0_0_15px_rgba(3,33,33,0.15)] flex items-center gap-2';
 
-toggleCategory() {
-  this.isSelected = !this.isSelected;
+toggleCategory(category: string) {
+  if (this.selectedCategories.includes(category)) {
+    this.selectedCategories = this.selectedCategories.filter(
+      c => c !== category
+    );
+  } else {
+    this.selectedCategories.push(category);
+  }
+}
+
+isSelected(category: string): boolean {
+  return this.selectedCategories.includes(category);
 }
 
 }

@@ -31,89 +31,118 @@
         <div class="flex flex-wrap justify-center gap-3 mt-6">
           <!-- Technology (Active Example) -->
           <button
-            class="group relative px-6 py-3 rounded-full border-2 border-primary-container bg-surface-container-lowest text-primary font-medium transition-all duration-300 scale-105 shadow-[0_0_15px_rgba(3,33,33,0.15)] flex items-center gap-2">
-            <span class="font-label text-sm">Technology</span>
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-          </button>
-          <!-- Inactive Categories -->
-          <button (click)="toggleCategory()" [ngClass]="isSelected ? selectedClass : normalClass">
-            <span class="font-label text-sm">Programming</span>
+  (click)="toggleCategory('Technology')"
+  [ngClass]="isSelected('Technology') ? selectedClass : normalClass"
+>
+  <span class="font-label text-sm">Technology</span>
 
-            @if (isSelected) {
-            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">
-              check_circle
-            </span>
-            }
-          </button>
+  @if (isSelected('Technology')) {
+    <span
+      class="material-symbols-outlined text-sm"
+      style="font-variation-settings: 'FILL' 1;"
+    >
+      check_circle
+    </span>
+  }
+</button>
+          <!-- Inactive Categories -->
+
+
+          
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Artificial
             Intelligence</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Machine
             Learning</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Web
             Development</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Mobile
             App Development</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">UI/UX
             Design</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Product
             Design</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Business
             &amp; Startups</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Finance
             &amp; Investing</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Marketing
             &amp; Growth</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Entrepreneurship</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Education
             &amp; Learning</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Science
             &amp; Research</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Health
             &amp; Wellness</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Fitness
             &amp; Nutrition</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Psychology</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Personal
             Development</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Productivity</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Career
             Advice</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Remote
             Work</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Freelancing</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Gaming</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Entertainment</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Travel
             &amp; Lifestyle</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Photography</button>
+
           <button
             class="font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200">Writing
             &amp; Blogging</button>
+
         </div>
       </div>
       <!-- Footer Action -->
