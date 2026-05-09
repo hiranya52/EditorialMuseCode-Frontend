@@ -35,7 +35,7 @@ export class LogIn {
   }
 
   goToFeed() {
-    this.router.navigate(['/onboarding/personalize-feed']);
+    this.router.navigate(['/personalize-feed']);
   }
 
   goToSignUp() {
@@ -57,6 +57,7 @@ export class LogIn {
         } else {
           this.message = 'Login Success';
           localStorage.setItem('token', res);
+          this.goToFeed();
         }
       },
     });
