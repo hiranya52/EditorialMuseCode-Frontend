@@ -46,7 +46,8 @@ export class LogIn {
           this.message = res;
         } else {
           this.message = 'Login Success';
-          localStorage.setItem('token', res);
+          // localStorage.setItem('token', res);
+          localStorage.setItem("token", res.message);
           console.log(res);
 
           this.goToFeed();
