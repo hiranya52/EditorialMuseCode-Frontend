@@ -47,6 +47,8 @@ export class LogIn {
         } else {
           this.message = 'Login Success';
           localStorage.setItem('token', res);
+          console.log(res);
+
           this.goToFeed();
         }
       },

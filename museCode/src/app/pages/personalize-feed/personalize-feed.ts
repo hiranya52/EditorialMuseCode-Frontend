@@ -30,10 +30,7 @@ export class PersonalizeFeed {
   }
 
   getList(){
-
     console.log(this.selectedCategories);
-
-
   }
 
 }
