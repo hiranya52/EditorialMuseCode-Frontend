@@ -33,6 +33,11 @@ export class PersonalizeFeed {
   }
 
 
+  onSubmit(){
+
+    this.feedService.setFeed(this.selectedCategories);
+
+  }
 
 
 
