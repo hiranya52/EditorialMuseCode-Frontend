@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FeedService } from '../../service/feed/feed-service';
 
 @Component({
   selector: 'app-personalize-feed',
@@ -10,6 +11,8 @@ import { Component } from '@angular/core';
 export class PersonalizeFeed {
 
   selectedCategories: string[] = [];
+
+  private feedService = inject(FeedService);
 
   normalClass =
     'font-label text-sm px-6 py-3 rounded-full border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:border-primary/40 hover:text-primary transition-all duration-200';
@@ -29,7 +32,7 @@ export class PersonalizeFeed {
     return this.selectedCategories.includes(category);
   }
 
-  
+
 
 
 
