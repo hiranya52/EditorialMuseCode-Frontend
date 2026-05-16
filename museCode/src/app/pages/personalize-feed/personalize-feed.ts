@@ -29,8 +29,8 @@ export class PersonalizeFeed {
     return this.selectedCategories.includes(category);
   }
 
-  getList(){
-    console.log(this.selectedCategories);
-  }
+  
+
+
 
 }
