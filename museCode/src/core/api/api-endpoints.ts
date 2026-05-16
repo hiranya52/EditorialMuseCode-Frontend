@@ -8,6 +8,11 @@ export const API_ENDPOINTS = {
   user: {
     register: `${BASE_URL}/auth/register`,
     LogIn: `${BASE_URL}/auth/login`
+  },
+
+  feed: {
+    personalized: `${BASE_URL}/api/interests`,
   }
 
+  
 }
