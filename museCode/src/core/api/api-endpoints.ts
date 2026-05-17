@@ -11,8 +11,9 @@ export const API_ENDPOINTS = {
   },
 
   feed: {
-    personalized: `${BASE_URL}/api/interests`,
+    getAllCategories: `${BASE_URL}/api/categories`,
+    personalized: `${BASE_URL}/api/interests`
   }
 
-  
+
 }
