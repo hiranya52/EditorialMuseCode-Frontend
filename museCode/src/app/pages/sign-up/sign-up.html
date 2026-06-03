@@ -5,11 +5,8 @@
     <!-- Visual Narrative Section -->
     <div class="hidden lg:flex lg:w-1/2 relative overflow-hidden bg-primary items-center justify-center p-24">
       <div class="absolute inset-0 z-0 opacity-40">
-        <img
-          alt="Artistic literary aesthetic"
-          class="w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjoW2jSotUM_hEzlcIg_agcqcoPsNpzWJaJuVM0ayzs1jv-52x9r8ZlbiBpAtyDB_SBdot4uhWsC5BHaqpca0T1ygoCxNwxSAoyS4b4i__jdn4mwTOqqvITQV0PP8lMTWctfNvDxBODHAmR6lo2isPuLQDl_LB_3dvphSoVV4q4Gs7ZzHet1c0egcS2ig-KB76nseRlNbdmoFY90EVfaGC9EIzhLmSdqCLpGVCPk0308breJPBkX01hNpzv6pYVf0f8yE3IbZVA2o"
-        />
+        <img alt="Artistic literary aesthetic" class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjoW2jSotUM_hEzlcIg_agcqcoPsNpzWJaJuVM0ayzs1jv-52x9r8ZlbiBpAtyDB_SBdot4uhWsC5BHaqpca0T1ygoCxNwxSAoyS4b4i__jdn4mwTOqqvITQV0PP8lMTWctfNvDxBODHAmR6lo2isPuLQDl_LB_3dvphSoVV4q4Gs7ZzHet1c0egcS2ig-KB76nseRlNbdmoFY90EVfaGC9EIzhLmSdqCLpGVCPk0308breJPBkX01hNpzv6pYVf0f8yE3IbZVA2o" />
       </div>
 
       <div class="absolute inset-0 bg-linear-to-t from-primary via-primary/60 to-transparent z-10"></div>
@@ -60,13 +57,8 @@
             <label class="font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant" for="name">
               Full Name
             </label>
-            <input
-              formControlName="fullName"
-              id="name"
-              type="text"
-              placeholder="Elias Thorne"
-              class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40"
-            />
+            <input formControlName="fullName" id="name" type="text" placeholder="Elias Thorne"
+              class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40" />
           </div>
 
           <!-- Email -->
@@ -74,13 +66,8 @@
             <label class="font-label text-[0.6875rem] uppercase tracking-widest text-on-surface-variant" for="email">
               Email Address
             </label>
-            <input
-              formControlName="email"
-              id="email"
-              type="email"
-              placeholder="elias@atelier.com"
-              class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40"
-            />
+            <input formControlName="email" id="email" type="email" placeholder="elias@atelier.com"
+              class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40" />
           </div>
 
           <!-- Password -->
@@ -89,66 +76,50 @@
               Password
             </label>
             <div class="relative flex items-center">
-              <input
-                formControlName="password"
-                id="password"
-                type="password"
-                placeholder="••••••••"
-                class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 pr-10 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40"
-              />
-              <button type="button" class="absolute right-0 text-on-surface-variant hover:text-primary transition-colors">
+              <input formControlName="password" id="password" type="password" placeholder="••••••••"
+                class="w-full bg-transparent border-0 border-b border-outline-variant/20 py-3 pr-10 px-0 focus:ring-0 focus:border-primary transition-colors font-body text-on-surface placeholder:text-outline/40" />
+              <button type="button"
+                class="absolute right-0 text-on-surface-variant hover:text-primary transition-colors">
                 <span class="material-symbols-outlined text-[20px]">visibility</span>
               </button>
             </div>
           </div>
 
           <!-- Submit -->
-          <button
-            type="submit" class="w-full bg-primary text-on-primary py-4 px-6 rounded-sm font-label text-sm uppercase tracking-widest hover:opacity-90 active:scale-[0.98] transition-all duration-200 mt-4" >
-            Create Account
-          </button>
-
+          <div class="pt-4 space-y-4">
+            <button
+              class="w-full bg-primary text-on-primary font-label text-xs uppercase tracking-widest py-5 rounded-sm hover:bg-primary-container transition-all active:scale-[0.98] duration-200"
+              type="submit">
+              Sign In
+            </button>
+            <div class="relative py-4">
+              <div class="absolute inset-0 flex items-center">
+                <div class="w-full border-t border-outline-variant/20"></div>
+              </div>
+              <div class="relative flex justify-center text-xs uppercase"><span
+                  class="bg-surface px-4 font-label text-outline tracking-widest">or continue with</span></div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <button
+                class="flex items-center justify-center gap-3 bg-surface-container-lowest border border-outline-variant/10 py-3 rounded-sm hover:bg-surface-container-low transition-colors group"
+                type="button">
+                <span
+                  class="material-symbols-outlined text-xl text-on-surface-variant group-hover:text-primary transition-colors">account_circle</span>
+                <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Google</span>
+              </button>
+              <button
+                class="flex items-center justify-center gap-3 bg-surface-container-lowest border border-outline-variant/10 py-3 rounded-sm hover:bg-surface-container-low transition-colors group"
+                type="button">
+                <span
+                  class="material-symbols-outlined text-xl text-on-surface-variant group-hover:text-primary transition-colors">terminal</span>
+                <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">GitHub</span>
+              </button>
+            </div>
+          </div>
         </form>
 
-        <!-- Divider -->
-        <div class="relative my-10">
-          <div class="absolute inset-0 flex items-center">
-            <div class="w-full border-t border-outline-variant/10"></div>
-          </div>
-          <div class="relative flex justify-center text-[0.6875rem] uppercase tracking-[0.15em]">
-            <span class="bg-surface px-4 text-on-surface-variant">
-              Or continue with
-            </span>
-          </div>
-        </div>
-
-        <!-- Social -->
-        <div class="grid grid-cols-2 gap-4 mb-10">
-
-          <!-- Google -->
-          <button class="flex items-center justify-center gap-3 py-3 px-4 border border-outline-variant/20 rounded-sm hover:bg-surface-container-low transition-colors group">
-            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">
-              account_circle
-            </span>
-            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">
-              Google
-            </span>
-          </button>
-
-          <!-- GitHub -->
-          <button class="flex items-center justify-center gap-3 py-3 px-4 border border-outline-variant/20 rounded-sm hover:bg-surface-container-low transition-colors group">
-            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">
-              terminal
-            </span>
-            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">
-              GitHub
-            </span>
-          </button>
-
-        </div>
-
         <!-- Footer -->
-        <div class="text-center">
+        <div class="text-center mt-4">
           <p class="font-body text-sm text-on-surface-variant">
             Already have an account?
             <a (click)="goToLogIn()" class="text-primary font-medium hover:underline underline-offset-4 ml-1">
