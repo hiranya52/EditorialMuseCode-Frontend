@@ -51,6 +51,21 @@ export class SignUp {
     //   console.log(res);
     // });
 
+    this.userService.register(registerData).subscribe({
+    next: (res: any) => {
+      console.log(res);
+
+      if (res.message === 'User registered successfully') {
+        this.goToFeed();
+      }
+    },
+
+    error: (err) => {
+      console.log(err);
+    }
+  });
+
+
 
   }
 
