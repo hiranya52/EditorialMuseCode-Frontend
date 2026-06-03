@@ -2,6 +2,7 @@ import { User } from './../../service/user/user';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Register } from '../../../model/Register.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -19,7 +20,10 @@ export class SignUp {
   email!:string;
   password!:string;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {
 
     this.signupForm = this.formBuilder.group({
       fullName: [''],
@@ -27,6 +31,10 @@ export class SignUp {
       password: ['']
     });
 
+  }
+
+  goToLogIn(){
+    this.router.navigate(['/auth/login']);
   }
 
   onSubmit(){
