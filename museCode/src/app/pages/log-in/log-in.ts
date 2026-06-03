@@ -29,8 +29,8 @@ export class LogIn {
     });
   }
 
-  goToFeed() {
-    this.router.navigate(['/personalize-feed']);
+  goToHome() {
+    this.router.navigate(['/app/home']);
   }
 
   goToSignUp() {
@@ -49,7 +49,7 @@ export class LogIn {
           localStorage.setItem("token", res.message);
           console.log(res);
 
-          // this.goToFeed();
+          this.goToHome();
         }
       },
     });
