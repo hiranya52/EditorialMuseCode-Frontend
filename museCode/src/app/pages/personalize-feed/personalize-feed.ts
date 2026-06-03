@@ -23,12 +23,6 @@ export class PersonalizeFeed implements OnInit {
   selectedClass =
     'group relative px-6 py-3 rounded-full border-2 border-primary-container bg-surface-container-lowest text-primary font-medium transition-all duration-300 shadow-[0_0_15px_rgba(3,33,33,0.15)] flex items-center gap-2';
 
-    // this.feedService.getAllCategories().subscribe({
-    //   next: (res) => {
-    //     this.categories = res;
-    //   }
-    // });
-
     ngOnInit(): void {
 
       this.feedService.getAllCategories().subscribe((res) => {
