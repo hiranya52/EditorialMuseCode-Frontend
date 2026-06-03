@@ -49,7 +49,7 @@ export class LogIn {
           localStorage.setItem("token", res.message);
           console.log(res);
 
-          this.goToFeed();
+          // this.goToFeed();
         }
       },
     });
