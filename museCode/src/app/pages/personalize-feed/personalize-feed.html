@@ -30,248 +30,35 @@
       <div class="category-grid overflow-y-auto grow px-2 mb-10">
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
+          <div class="flex flex-wrap justify-center gap-3 mt-6">
 
-          <button (click)="toggleCategory('Technology')"
-            [ngClass]="isSelected('Technology') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Technology</span>
-            @if (isSelected('Technology')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+  @for (category of categories; track category.id) {
 
-          <button (click)="toggleCategory('Programming')"
-            [ngClass]="isSelected('Programming') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Programming</span>
-            @if (isSelected('Programming')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+    <button
+      (click)="toggleCategory(category.id)"
+      [ngClass]="isSelected(category.id) ? selectedClass : normalClass">
 
-          <button (click)="toggleCategory('Artificial Intelligence')"
-            [ngClass]="isSelected('Artificial Intelligence') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Artificial Intelligence</span>
-            @if (isSelected('Artificial Intelligence')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+      <span class="font-label text-sm">
+        {{ category.name }}
+      </span>
 
-          <button (click)="toggleCategory('Machine Learning')"
-            [ngClass]="isSelected('Machine Learning') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Machine Learning</span>
-            @if (isSelected('Machine Learning')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+      @if (isSelected(category.id)) {
 
-          <button (click)="toggleCategory('Web Development')"
-            [ngClass]="isSelected('Web Development') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Web Development</span>
-            @if (isSelected('Web Development')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+        <span
+          class="material-symbols-outlined text-sm"
+          style="font-variation-settings: 'FILL' 1;">
 
-          <button (click)="toggleCategory('Mobile App Development')"
-            [ngClass]="isSelected('Mobile App Development') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Mobile App Development</span>
-            @if (isSelected('Mobile App Development')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+          check_circle
 
-          <button (click)="toggleCategory('UI/UX Design')"
-            [ngClass]="isSelected('UI/UX Design') ? selectedClass : normalClass">
-            <span class="font-label text-sm">UI/UX Design</span>
-            @if (isSelected('UI/UX Design')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+        </span>
 
-          <button (click)="toggleCategory('Product Design')"
-            [ngClass]="isSelected('Product Design') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Product Design</span>
-            @if (isSelected('Product Design')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+      }
 
-          <button (click)="toggleCategory('Business & Startups')"
-            [ngClass]="isSelected('Business & Startups') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Business & Startups</span>
-            @if (isSelected('Business & Startups')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+    </button>
 
-          <button (click)="toggleCategory('Finance & Investing')"
-            [ngClass]="isSelected('Finance & Investing') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Finance & Investing</span>
-            @if (isSelected('Finance & Investing')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+  }
 
-          <button (click)="toggleCategory('Marketing & Growth')"
-            [ngClass]="isSelected('Marketing & Growth') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Marketing & Growth</span>
-            @if (isSelected('Marketing & Growth')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Entrepreneurship')"
-            [ngClass]="isSelected('Entrepreneurship') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Entrepreneurship</span>
-            @if (isSelected('Entrepreneurship')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Education & Learning')"
-            [ngClass]="isSelected('Education & Learning') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Education & Learning</span>
-            @if (isSelected('Education & Learning')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Science & Research')"
-            [ngClass]="isSelected('Science & Research') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Science & Research</span>
-            @if (isSelected('Science & Research')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Health & Wellness')"
-            [ngClass]="isSelected('Health & Wellness') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Health & Wellness</span>
-            @if (isSelected('Health & Wellness')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Fitness & Nutrition')"
-            [ngClass]="isSelected('Fitness & Nutrition') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Fitness & Nutrition</span>
-            @if (isSelected('Fitness & Nutrition')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Psychology')"
-            [ngClass]="isSelected('Psychology') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Psychology</span>
-            @if (isSelected('Psychology')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Personal Development')"
-            [ngClass]="isSelected('Personal Development') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Personal Development</span>
-            @if (isSelected('Personal Development')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Productivity')"
-            [ngClass]="isSelected('Productivity') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Productivity</span>
-            @if (isSelected('Productivity')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Career Advice')"
-            [ngClass]="isSelected('Career Advice') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Career Advice</span>
-            @if (isSelected('Career Advice')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Remote Work')"
-            [ngClass]="isSelected('Remote Work') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Remote Work</span>
-            @if (isSelected('Remote Work')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Freelancing')"
-            [ngClass]="isSelected('Freelancing') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Freelancing</span>
-            @if (isSelected('Freelancing')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Gaming')" [ngClass]="isSelected('Gaming') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Gaming</span>
-            @if (isSelected('Gaming')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Entertainment')"
-            [ngClass]="isSelected('Entertainment') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Entertainment</span>
-            @if (isSelected('Entertainment')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Travel & Lifestyle')"
-            [ngClass]="isSelected('Travel & Lifestyle') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Travel & Lifestyle</span>
-            @if (isSelected('Travel & Lifestyle')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Photography')"
-            [ngClass]="isSelected('Photography') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Photography</span>
-            @if (isSelected('Photography')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
-
-          <button (click)="toggleCategory('Writing & Blogging')"
-            [ngClass]="isSelected('Writing & Blogging') ? selectedClass : normalClass">
-            <span class="font-label text-sm">Writing & Blogging</span>
-            @if (isSelected('Writing & Blogging')) {
-            <span class="material-symbols-outlined text-sm"
-              style="font-variation-settings: 'FILL' 1;">check_circle</span>
-            }
-          </button>
+</div>
 
         </div>
       </div>
