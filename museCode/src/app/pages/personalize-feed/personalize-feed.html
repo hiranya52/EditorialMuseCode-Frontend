@@ -30,38 +30,45 @@
       <div class="category-grid overflow-y-auto grow px-2 mb-10">
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
-          <div class="flex flex-wrap justify-center gap-3 mt-6">
+          <!-- @for (category of categories; track category.id) {
 
-  @for (category of categories; track category.id) {
+          <button (click)="toggleCategory(category.id)"
+            [ngClass]="isSelected(category.id) ? selectedClass : normalClass">
 
-    <button
-      (click)="toggleCategory(category.id)"
-      [ngClass]="isSelected(category.id) ? selectedClass : normalClass">
+            <span class="font-label text-sm">
+              {{ category.name }}
+            </span>
 
-      <span class="font-label text-sm">
-        {{ category.name }}
-      </span>
+            @if (isSelected(category.id)) {
 
-      @if (isSelected(category.id)) {
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">
+              check_circle
+            </span>
+            }
+          </button>
+          } -->
+          <div *ngFor="let category of categories">
 
-        <span
-          class="material-symbols-outlined text-sm"
-          style="font-variation-settings: 'FILL' 1;">
+            <button (click)="toggleCategory(category.id)"
+              [ngClass]="isSelected(category.id) ? selectedClass : normalClass">
 
-          check_circle
+              <span class="font-label text-sm">
+                {{ category.name }}
+              </span>
 
-        </span>
+              <span *ngIf="isSelected(category.id)" class="material-symbols-outlined text-sm"
+                style="font-variation-settings: 'FILL' 1;">
 
-      }
+                check_circle
 
-    </button>
+              </span>
 
-  }
+            </button>
 
-</div>
-
+          </div>
         </div>
       </div>
+
       <!-- Footer Action -->
       <div class="flex flex-col items-center gap-4">
         <button (click)="onSubmit()"

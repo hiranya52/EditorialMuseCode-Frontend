@@ -12,9 +12,9 @@ export class FeedService {
   constructor(private http: HttpClient){}
 
 
-  getAllCategories(): Observable<Category> {
+  getAllCategories(): Observable<Category[]> {
 
-    return this.http.get<Category>(API_ENDPOINTS.feed.getAllCategories);
+    return this.http.get<Category[]>(API_ENDPOINTS.feed.getAllCategories);
 
   }
 
