@@ -1,79 +1,208 @@
 <!-- Left Sidebar Navigation -->
 <aside
   class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-stone-50 flex flex-col py-6 px-0 gap-4 overflow-y-auto md:flex border-r border-stone-200/20">
+
+  <!-- Main Navigation -->
   <nav class="flex flex-col gap-1 px-4">
 
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
+    <!-- Home -->
+    <a
       routerLink="/app/home"
-      routerLinkActive="nav-link-active"
+      routerLinkActive="bg-white text-teal-950 font-semibold shadow-sm"
       [routerLinkActiveOptions]="{ exact: true }"
-      >
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">home</span>
-      <span class="font-sans text-sm tracking-wide" >Home</span>
+
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        home
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Home
+      </span>
     </a>
 
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      routerLink="/app/profile">
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">person</span>
-      <span class="font-sans text-sm tracking-wide">Profile</span>
+    <!-- Profile -->
+    <a
+      routerLink="/app/profile"
+      routerLinkActive="bg-white text-teal-950 font-semibold shadow-sm"
+
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        person
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Profile
+      </span>
     </a>
 
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      routerLink="/app/followers">
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">group</span>
-      <span class="font-sans text-sm tracking-wide">Followers</span>
+    <!-- Followers -->
+    <a
+      routerLink="/app/followers"
+      routerLinkActive="bg-white text-teal-950 font-semibold shadow-sm"
+
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        group
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Followers
+      </span>
     </a>
 
-    <!-- <a class="flex items-center gap-3 px-3 py-2.5 text-teal-950 font-semibold bg-white shadow-sm rounded-lg transition-all duration-200 group" -->
-     <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      routerLink="/app/library">
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform"
-        style="font-variation-settings: 'FILL' 1">auto_stories</span>
-      <span class="font-sans text-sm tracking-wide">Library</span>
+    <!-- Library -->
+    <a
+      routerLink="/app/library"
+      routerLinkActive="bg-white text-teal-950 font-semibold shadow-sm"
+
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110"
+        style="font-variation-settings: 'FILL' 1">
+        auto_stories
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Library
+      </span>
     </a>
 
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      routerLink="/app/writing">
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">edit_note</span>
-      <span class="font-sans text-sm tracking-wide">Writing</span>
+    <!-- Writing -->
+    <a
+      routerLink="/app/writing"
+      routerLinkActive="bg-white text-teal-950 font-semibold shadow-sm"
+
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        edit_note
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Writing
+      </span>
     </a>
 
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      routerLink="/app/stats">
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">query_stats</span>
-      <span class="font-sans text-sm tracking-wide">Stats</span>
+    <!-- Stats -->
+    <a
+      routerLink="/app/stats"
+      routerLinkActive="bg-white text-teal-950 font-semibold shadow-sm"
+
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        query_stats
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Stats
+      </span>
     </a>
 
   </nav>
+
+  <!-- Preferences Section -->
   <div class="px-7 pt-4 border-t border-stone-200/50">
-    <span class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">Preferences</span>
+    <span class="text-[10px] font-bold text-stone-400 uppercase tracking-widest">
+      Preferences
+    </span>
   </div>
+
+  <!-- Preferences Navigation -->
   <nav class="flex flex-col gap-1 px-4">
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      >
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">group</span>
-      <span class="font-sans text-sm tracking-wide">Following</span>
+
+    <!-- Following -->
+    <a
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        group
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Following
+      </span>
     </a>
-    <a class="flex items-center gap-3 px-3 py-2.5 text-stone-500 hover:bg-white/80 hover:text-primary rounded-lg transition-all duration-200 group"
-      >
-      <span class="material-symbols-outlined text-xl group-hover:scale-110 transition-transform">settings</span>
-      <span class="font-sans text-sm tracking-wide">Settings</span>
+
+    <!-- Settings -->
+    <a
+      class="flex items-center gap-3 px-3 py-2.5
+             text-stone-500 hover:bg-white/80 hover:text-primary
+             rounded-lg transition-all duration-200 group">
+
+      <span
+        class="material-symbols-outlined text-xl transition-transform duration-200 group-hover:scale-110">
+        settings
+      </span>
+
+      <span class="font-sans text-sm tracking-wide">
+        Settings
+      </span>
     </a>
+
   </nav>
+
+  <!-- Upgrade Card -->
   <div class="mt-auto px-4 pb-4">
+
     <div
       class="p-4 bg-primary text-on-primary rounded-xl overflow-hidden relative group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+
       <div class="relative z-10">
-        <p class="font-label text-xs font-bold opacity-80 uppercase tracking-widest mb-1">Upgrade</p>
-        <p class="font-headline text-lg mb-3">Refine your craft</p>
+
+        <p class="font-label text-xs font-bold opacity-80 uppercase tracking-widest mb-1">
+          Upgrade
+        </p>
+
+        <p class="font-headline text-lg mb-3">
+          Refine your craft
+        </p>
+
         <button
-          class="bg-on-primary text-primary px-4 py-2 rounded-sm text-xs font-bold hover:bg-primary-fixed transition-colors">Unlock
-          Pro</button>
+          class="bg-on-primary text-primary px-4 py-2 rounded-sm text-xs font-bold hover:bg-primary-fixed transition-colors">
+
+          Unlock Pro
+
+        </button>
+
       </div>
+
       <div
         class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-125 group-hover:opacity-20 transition-all duration-500">
-        <span class="material-symbols-outlined text-8xl">ink_pen</span>
+
+        <span class="material-symbols-outlined text-8xl">
+          ink_pen
+        </span>
+
       </div>
+
     </div>
+
   </div>
+
 </aside>
