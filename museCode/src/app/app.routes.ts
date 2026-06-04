@@ -10,6 +10,54 @@ import { Followers } from './components/followers/followers';
 import { ArticleView } from './components/article-view/article-view';
 import { PersonalizeFeed } from './pages/personalize-feed/personalize-feed';
 
+// export const routes: Routes = [
+
+  // 🌍 Public Pages
+//   {
+//     path: '',
+//     component: LandingPage
+//   },
+//   { path: 'auth/login',
+//     component: LogIn
+//   },
+//   {
+//     path: 'signUp',
+//     component: SignUp
+//   },
+//   {
+//     path: 'new-story',
+//     component: WritePage
+//   },
+//   {
+//     path: 'personalize-feed',
+//     component: PersonalizeFeed
+//   },
+//   // ⚙️ App Layout (Protected Area)
+//   {
+//     path: 'app',
+//     component: MainPage,
+//     children: [
+//       {
+//         path: 'home',
+//         component: Feed
+//       },
+//       {
+//         path: 'profile',
+//         component: UserProfile
+//       },
+//       {
+//         path: 'followers',
+//         component: Followers
+//       },
+//       {
+//         path: 'article-view',
+//         component: ArticleView
+//       }
+//     ],
+//   },
+// ];
+
+
 export const routes: Routes = [
 
   // 🌍 Public Pages
@@ -17,42 +65,84 @@ export const routes: Routes = [
     path: '',
     component: LandingPage
   },
-  { path: 'auth/login',
+
+  {
+    path: 'auth/login',
     component: LogIn
   },
+
   {
     path: 'signUp',
     component: SignUp
   },
+
   {
     path: 'new-story',
     component: WritePage
   },
+
   {
     path: 'personalize-feed',
     component: PersonalizeFeed
   },
-  // ⚙️ App Layout (Protected Area)
+
+  // ⚙️ App Layout
   {
     path: 'app',
     component: MainPage,
+
     children: [
+
+      // default route
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+
       {
         path: 'home',
         component: Feed
       },
+
       {
         path: 'profile',
         component: UserProfile
       },
+
       {
         path: 'followers',
         component: Followers
       },
+
       {
         path: 'article-view',
         component: ArticleView
+      },
+
+      // ✅ Added missing routes
+      // {
+      //   path: 'library',
+      //   component: LibraryComponent
+      // },
+
+      {
+        path: 'writing',
+        component: WritePage
       }
+
+      // {
+      //   path: 'stats',
+      //   component: StatsComponent
+      // }
+
     ],
   },
+
+  // fallback
+  {
+    path: '**',
+    redirectTo: ''
+  }
+
 ];
