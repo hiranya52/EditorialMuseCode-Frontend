@@ -1,0 +1,23 @@
+.sidebar-link {
+  @apply flex items-center gap-3 px-3 py-2.5 rounded-lg
+  text-stone-500 hover:bg-white/80 hover:text-primary
+  transition-all duration-200;
+}
+
+.sidebar-link .icon {
+  @apply transition-transform duration-200;
+}
+
+.sidebar-link:hover .icon {
+  transform: scale(1.1);
+}
+
+/* ACTIVE LINK */
+.nav-link-active {
+  @apply bg-white text-teal-950 font-semibold shadow-sm;
+}
+
+/* ACTIVE ICON */
+.nav-link-active .icon {
+  font-variation-settings: 'FILL' 1;
+}
