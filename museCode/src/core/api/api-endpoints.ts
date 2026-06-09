@@ -13,6 +13,11 @@ export const API_ENDPOINTS = {
   feed: {
     getAllCategories: `${BASE_URL}/api/categories`,
     personalized: `${BASE_URL}/api/interests`
+  },
+
+  profile: {
+    getUserProfile: (userId: number) => `${BASE_URL}/profile/${userId}`,
+    updateUserProfile: (userId: number) => `${BASE_URL}/profile/${userId}`
   }
 
 
