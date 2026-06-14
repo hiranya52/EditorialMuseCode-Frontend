@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class ProfileService {
 
-  
+  constructor(private http: HttpClient){}
+
+  getUserProfile(userId: number){
+    
+  }
 
 }
