@@ -17,6 +17,8 @@ export class Navbar {
 
     if (userId) {
       this.profileService.getUserProfile(userId).subscribe(res => {
+        console.log(userId);
+
         console.log(res);
       });
     }
