@@ -37,8 +37,8 @@ export class UserProfile implements OnInit{
 
     this.profileService.getUserProfile(userId).subscribe({
       next: (data) => {
-        console.log(data);
-
+        this.profile = data as Profile;
+        console.log(this.profile);
       },
 
       error: (err) => {
