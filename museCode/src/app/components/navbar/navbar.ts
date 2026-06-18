@@ -24,6 +24,7 @@ export class Navbar {
     // }
   }
 
+  
   profileImageUrl: string = 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1yRc51jYOfI4pci7wLsRLBZ2h6CHzPvuh0N1qCtf-px58wyuNSn_f08hGaSBWUa1pEBX3vPbiGOt3HdyxyzTStnMEQOQuaaBV1I9kbILKoeV5WRcvA4SZwsQmlKyk6HpQx9QchFqULNmrx-mE9MrGYoeDdn6W-gi2BvqFrRcZhPPG-0BPBsS-xpF3UJxLGJwqyENQ2Y3npMfaGTUjZH19OmeboeDZE_hgQJ66P8goDQJzNFvMb5_pCmN34HVDHybVtKq20Zohpt4';
 
 

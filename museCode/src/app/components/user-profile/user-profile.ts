@@ -1,7 +1,8 @@
+import { ProfileService } from './../../service/profile/profile-service';
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { EditProfile } from "../edit-profile/edit-profile";
-import { ProfileService } from '../../service/profile/profile-service';
+import { AuthService } from '../../service/auth/auth.service';
 @Component({
   selector: 'app-user-profile',
   imports: [CommonModule, EditProfile],
@@ -10,11 +11,18 @@ import { ProfileService } from '../../service/profile/profile-service';
 })
 export class UserProfile implements OnInit{
 
-  private profileService = inject(ProfileService);
+  constructor(private authService: AuthService, private profileService: ProfileService) {}
 
   ngOnInit(): void {
 
-    this.profileService.getUserProfile(16).subscribe({
+    const userId = this.authService.getUserId();
+
+    if (userId == null) {
+      console.error('User ID is null');
+      return;
+    }
+
+    this.profileService.getUserProfile(userId).subscribe({
       next: (data) => {
         console.log(data);
       },
