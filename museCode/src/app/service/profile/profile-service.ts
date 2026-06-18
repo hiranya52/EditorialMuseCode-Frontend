@@ -11,9 +11,17 @@ export class ProfileService {
 
   constructor(private http: HttpClient){}
 
-  getUserProfile(userId: number): Observable<User>{
+  // getUserProfile(userId: number): Observable<User>{
+  //   return this.http.get<User>(API_ENDPOINTS.profile.getUserProfile(userId));
+  // }
 
-    return this.http.get<User>(API_ENDPOINTS.profile.getUserProfile(userId));
+  getUserProfile(userId: number): Observable<User> {
+
+    return this.http.get<User>(
+
+      API_ENDPOINTS.profile.getUserProfile(userId)
+
+    );
 
   }
 
