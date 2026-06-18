@@ -19,5 +19,4 @@ export const API_ENDPOINTS = {
     updateUserProfile: (userId: number) => `${BASE_URL}/profile/${userId}`
   }
 
-
 }
