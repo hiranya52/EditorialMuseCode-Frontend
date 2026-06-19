@@ -1,176 +1,169 @@
-<!-- <div class="bg-surface text-on-surface"> -->
-  <!-- Main Content Area -->
-  <!-- <div class="pt-32 pb-20 md:pl-72 px-6 max-w-7xl mx-auto"> -->
-    <!-- Profile Header Section (Asymmetric) -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-end">
-      <div class="lg:col-span-4 relative">
-        <div
-          class="aspect-square bg-surface-container-low rounded-sm overflow-hidden shadow-[0_20px_40px_rgba(28,27,27,0.06)]">
-          <img alt="Elena Vane" class="w-full h-full object-cover"
-            data-alt="professional portrait of a writer with dark hair, wearing a beige linen shirt, standing in front of a minimalist white background"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZmIKchj5Xg91HkfT_lCgDe_KU3SFnSsl3Bue_Zz7bCGcfJnBe3degWBpFViv_OMa6XPn7fCb68uh_PnXibUPGOHpawIYt4JX62wr45jIcuQtdiXcxFzOOKtM0XEKKSSKJe7vOOXIVxVGqtQRqTBOBjA6mX3T0YjtTon6PTXj5kHzQ_biNdOPgjh6B0mwG1FDGA_lPUWxDXXYQc81-H_e7BKAuI1gBdk3qQUJZ-huYePahg7rrQ_GpFa3cueePvA6G2Sh8zFtazG8" />
-        </div>
-        <div
-          class="absolute -bottom-6 -right-6 bg-tertiary w-16 h-16 flex items-center justify-center text-on-tertiary">
-          <span class="material-symbols-outlined text-3xl">verified</span>
-        </div>
-      </div>
-      <div class="lg:col-span-8 space-y-8">
-        <div>
-          <h1 class="text-6xl font-headline italic tracking-tighter text-primary mb-4">Elena Vane</h1>
-          <p class="text-xl font-body text-secondary max-w-2xl leading-relaxed">
-            Curating the intersection of classical literature and modern digital architecture. Writing on the philosophy
-            of space, both physical and virtual.
-          </p>
-        </div>
-        <div class="flex gap-12 items-center border-t border-outline-variant/15 pt-8">
-          <div class="text-center md:text-left">
-            <span class="block text-3xl font-headline text-primary">142</span>
-            <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Articles</span>
-          </div>
-          <div class="text-center md:text-left">
-            <span class="block text-3xl font-headline text-primary">12.8k</span>
-            <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Followers</span>
-          </div>
-          <div class="text-center md:text-left">
-            <span class="block text-3xl font-headline text-primary">840</span>
-            <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Following</span>
-          </div>
-          <button (click)="openEdit()"
-            class="ml-auto flex items-center gap-2 border border-primary px-8 py-3 text-primary font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
-            Edit Profile
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- Tabbed Content Section -->
-    <section class="space-y-12">
-      <!-- Custom Tabs -->
-      <div class="flex gap-10 border-b border-outline-variant/15">
-        <button class="relative pb-4 text-primary font-headline italic text-xl">
-          My Articles
-          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-tertiary rounded-full"></span>
-        </button>
-        <button class="pb-4 text-zinc-400 hover:text-primary transition-colors font-headline italic text-xl">Saved
-          Drafts</button>
-        <button
-          class="pb-4 text-zinc-400 hover:text-primary transition-colors font-headline italic text-xl">Followers</button>
-        <button
-          class="pb-4 text-zinc-400 hover:text-primary transition-colors font-headline italic text-xl">Notes</button>
-      </div>
-      <!-- Bento Grid Content -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Featured Article (Large) -->
-        <div class="md:col-span-2 group">
-          <div
-            class="bg-surface-container-low p-8 h-full flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300">
-            <div class="space-y-6">
-              <span
-                class="inline-block bg-primary-fixed px-3 py-1 text-[0.6rem] font-label uppercase tracking-[0.2em] text-on-primary-fixed">Philosophy</span>
-              <h2 class="text-4xl font-headline leading-tight group-hover:italic transition-all">The Architecture of
-                Silence: Designing for Deep Contemplation</h2>
-              <p class="text-secondary leading-relaxed line-clamp-3">In an era of perpetual noise, the most radical
-                design choice is one that demands nothing from the viewer. Exploring the minimalist structures of
-                21st-century digital sanctuaries...</p>
-            </div>
-            <div
-              class="mt-12 flex justify-between items-center text-zinc-400 font-label text-[0.6875rem] uppercase tracking-widest">
-              <span>12 Min Read</span>
-              <span
-                class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-            </div>
-          </div>
-        </div>
-        <!-- Secondary Article -->
-        <div class="group">
-          <div
-            class="bg-surface-container-lowest p-8 h-full flex flex-col border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
-            <div class="aspect-video mb-6 overflow-hidden bg-zinc-100">
-              <img alt="Article Thumbnail"
-                class="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
-                data-alt="minimalist architectural photo of a white spiral staircase in a sunlit gallery with sharp shadows"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj7u1eg0qrZvOHlM7HKZ5Wb_914PVM3EuWPPK4Fjydsyu00yDnnp9R5NjMdFrFjf0Y17jAQpaxNHpWkkjrPZeNPdNaroGCsGE5T0KcRTBgeEjGnjjU2ti3eXodl1NwjHJWe-WgO8uhBKgsBQFkleyomrvWROkPNeLwGBBrSVhOV5GSwOgNsywsCz3hTRbttqzW-P4_cKnrbnN9yIZt-eWZ4JQHKdRAnPY33aUc_FSJQvn3ukok4xoJWbL6_TP3MNeShKOU27QGQFs" />
-            </div>
-            <h3 class="text-2xl font-headline mb-4">Typography as Texture</h3>
-            <p class="text-sm text-secondary leading-relaxed grow">How the weight of a serif communicates authority
-              before a single word is read.</p>
-            <div
-              class="mt-8 pt-6 border-t border-outline-variant/10 flex justify-between items-center text-zinc-400 font-label text-[0.6rem] uppercase tracking-widest">
-              <span>Oct 24, 2023</span>
-              <span>Draft</span>
-            </div>
-          </div>
-        </div>
-        <!-- Notes Section (Glass Card) -->
-        <div class="md:col-span-3">
-          <div
-            class="bg-linear-to-br from-primary to-primary-container p-12 text-on-primary-fixed flex flex-col md:flex-row gap-12 items-center">
-            <div class="md:w-1/3">
-              <h2 class="text-5xl font-headline italic mb-4 text-white">Recent Notes</h2>
-              <p class="text-on-primary-container font-body leading-relaxed">Fleeting thoughts, morning reflections, and
-                intellectual scraps from the drafting room.</p>
-            </div>
-            <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div class="bg-white/5 backdrop-blur-md p-6 border border-white/10">
-                <p class="text-sm font-body italic mb-4">"The screen is not a window; it is a canvas where light mimics
-                  paper. We must treat it as such."</p>
-                <span class="text-[0.6rem] font-label uppercase tracking-widest opacity-60">Posted 2h ago</span>
-              </div>
-              <div class="bg-white/5 backdrop-blur-md p-6 border border-white/10">
-                <p class="text-sm font-body italic mb-4">"Sustainability in UI is about reducing visual cognitive load,
-                  not just carbon footprints."</p>
-                <span class="text-[0.6rem] font-label uppercase tracking-widest opacity-60">Posted 1d ago</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- More Articles -->
-        <div class="group">
-          <div class="bg-surface-container-low p-8 h-full flex flex-col hover:bg-surface-container-high transition-all">
-            <span class="text-[0.6rem] font-label uppercase tracking-widest text-tertiary mb-2">Essay</span>
-            <h3 class="text-2xl font-headline group-hover:italic transition-all">The Ink in the Machine</h3>
-            <div class="mt-auto pt-8 flex items-center justify-between text-zinc-400">
-              <span class="font-label text-[0.6rem] uppercase tracking-widest">8 Min</span>
-              <span class="material-symbols-outlined text-sm">bookmark</span>
-            </div>
-          </div>
-        </div>
-        <div class="group">
-          <div class="bg-surface-container-low p-8 h-full flex flex-col hover:bg-surface-container-high transition-all">
-            <span class="text-[0.6rem] font-label uppercase tracking-widest text-tertiary mb-2">Review</span>
-            <h3 class="text-2xl font-headline group-hover:italic transition-all">Modernism Revived</h3>
-            <div class="mt-auto pt-8 flex items-center justify-between text-zinc-400">
-              <span class="font-label text-[0.6rem] uppercase tracking-widest">15 Min</span>
-              <span class="material-symbols-outlined text-sm">bookmark</span>
-            </div>
-          </div>
-        </div>
-        <div class="group">
-          <div class="bg-surface-container-low p-8 h-full flex flex-col hover:bg-surface-container-high transition-all">
-            <span class="text-[0.6rem] font-label uppercase tracking-widest text-tertiary mb-2">Curated</span>
-            <h3 class="text-2xl font-headline group-hover:italic transition-all">Library Essentials</h3>
-            <div class="mt-auto pt-8 flex items-center justify-between text-zinc-400">
-              <span class="font-label text-[0.6rem] uppercase tracking-widest">5 Min</span>
-              <span class="material-symbols-outlined text-sm">bookmark</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Reading Progress (Design System Token) -->
-    <div class="fixed top-0 left-0 h-0.5 w-1/3 bg-surface-tint z-60"></div>
-  <!-- </div> -->
-  <!-- Floating Navigation for Mobile -->
-  <div
-    class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-lg shadow-2xl rounded-full px-8 py-4 flex items-center gap-10 z-50">
-    <button class="material-symbols-outlined text-primary" data-weight="fill">home</button>
-    <button class="material-symbols-outlined text-zinc-400">book_2</button>
-    <button class="material-symbols-outlined text-zinc-400">edit_note</button>
-    <button class="material-symbols-outlined text-zinc-400">group</button>
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-end">
+  <div class="lg:col-span-4 relative">
+    <div
+      class="aspect-square bg-surface-container-low rounded-sm overflow-hidden shadow-[0_20px_40px_rgba(28,27,27,0.06)]">
+      <img alt="Elena Vane" class="w-full h-full object-cover"
+        data-alt="professional portrait of a writer with dark hair, wearing a beige linen shirt, standing in front of a minimalist white background"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZmIKchj5Xg91HkfT_lCgDe_KU3SFnSsl3Bue_Zz7bCGcfJnBe3degWBpFViv_OMa6XPn7fCb68uh_PnXibUPGOHpawIYt4JX62wr45jIcuQtdiXcxFzOOKtM0XEKKSSKJe7vOOXIVxVGqtQRqTBOBjA6mX3T0YjtTon6PTXj5kHzQ_biNdOPgjh6B0mwG1FDGA_lPUWxDXXYQc81-H_e7BKAuI1gBdk3qQUJZ-huYePahg7rrQ_GpFa3cueePvA6G2Sh8zFtazG8" />
+    </div>
+    <div class="absolute -bottom-6 -right-6 bg-tertiary w-16 h-16 flex items-center justify-center text-on-tertiary">
+      <span class="material-symbols-outlined text-3xl">verified</span>
+    </div>
   </div>
+  <div class="lg:col-span-8 space-y-8">
+    <div>
+      <h1 class="text-6xl font-headline italic tracking-tighter text-primary mb-4">Elena Vane</h1>
+      <p class="text-xl font-body text-secondary max-w-2xl leading-relaxed">
+        Curating the intersection of classical literature and modern digital architecture. Writing on the philosophy
+        of space, both physical and virtual.
+      </p>
+    </div>
+    <div class="flex gap-12 items-center border-t border-outline-variant/15 pt-8">
+      <div class="text-center md:text-left">
+        <span class="block text-3xl font-headline text-primary">142</span>
+        <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Articles</span>
+      </div>
+      <div class="text-center md:text-left">
+        <span class="block text-3xl font-headline text-primary">12.8k</span>
+        <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Followers</span>
+      </div>
+      <div class="text-center md:text-left">
+        <span class="block text-3xl font-headline text-primary">840</span>
+        <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Following</span>
+      </div>
+      <button (click)="openEdit()"
+        class="ml-auto flex items-center gap-2 border border-primary px-8 py-3 text-primary font-label text-xs uppercase tracking-widest hover:bg-primary hover:text-white transition-all">
+        Edit Profile
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Tabbed Content Section -->
+<section class="space-y-12">
+  <!-- Custom Tabs -->
+  <div class="flex gap-10 border-b border-outline-variant/15">
+    <button class="relative pb-4 text-primary font-headline italic text-xl">
+      My Articles
+      <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-tertiary rounded-full"></span>
+    </button>
+    <button class="pb-4 text-zinc-400 hover:text-primary transition-colors font-headline italic text-xl">Saved
+      Drafts</button>
+    <button
+      class="pb-4 text-zinc-400 hover:text-primary transition-colors font-headline italic text-xl">Followers</button>
+    <button class="pb-4 text-zinc-400 hover:text-primary transition-colors font-headline italic text-xl">Notes</button>
+  </div>
+  <!-- Bento Grid Content -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Featured Article (Large) -->
+    <div class="md:col-span-2 group">
+      <div
+        class="bg-surface-container-low p-8 h-full flex flex-col justify-between hover:bg-surface-container-high transition-all duration-300">
+        <div class="space-y-6">
+          <span
+            class="inline-block bg-primary-fixed px-3 py-1 text-[0.6rem] font-label uppercase tracking-[0.2em] text-on-primary-fixed">Philosophy</span>
+          <h2 class="text-4xl font-headline leading-tight group-hover:italic transition-all">The Architecture of
+            Silence: Designing for Deep Contemplation</h2>
+          <p class="text-secondary leading-relaxed line-clamp-3">In an era of perpetual noise, the most radical
+            design choice is one that demands nothing from the viewer. Exploring the minimalist structures of
+            21st-century digital sanctuaries...</p>
+        </div>
+        <div
+          class="mt-12 flex justify-between items-center text-zinc-400 font-label text-[0.6875rem] uppercase tracking-widest">
+          <span>12 Min Read</span>
+          <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+        </div>
+      </div>
+    </div>
+    <!-- Secondary Article -->
+    <div class="group">
+      <div
+        class="bg-surface-container-lowest p-8 h-full flex flex-col border border-outline-variant/10 hover:shadow-xl transition-all duration-300">
+        <div class="aspect-video mb-6 overflow-hidden bg-zinc-100">
+          <img alt="Article Thumbnail"
+            class="w-full h-full object-cover transition-transform group-hover:scale-105 duration-500"
+            data-alt="minimalist architectural photo of a white spiral staircase in a sunlit gallery with sharp shadows"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj7u1eg0qrZvOHlM7HKZ5Wb_914PVM3EuWPPK4Fjydsyu00yDnnp9R5NjMdFrFjf0Y17jAQpaxNHpWkkjrPZeNPdNaroGCsGE5T0KcRTBgeEjGnjjU2ti3eXodl1NwjHJWe-WgO8uhBKgsBQFkleyomrvWROkPNeLwGBBrSVhOV5GSwOgNsywsCz3hTRbttqzW-P4_cKnrbnN9yIZt-eWZ4JQHKdRAnPY33aUc_FSJQvn3ukok4xoJWbL6_TP3MNeShKOU27QGQFs" />
+        </div>
+        <h3 class="text-2xl font-headline mb-4">Typography as Texture</h3>
+        <p class="text-sm text-secondary leading-relaxed grow">How the weight of a serif communicates authority
+          before a single word is read.</p>
+        <div
+          class="mt-8 pt-6 border-t border-outline-variant/10 flex justify-between items-center text-zinc-400 font-label text-[0.6rem] uppercase tracking-widest">
+          <span>Oct 24, 2023</span>
+          <span>Draft</span>
+        </div>
+      </div>
+    </div>
+    <!-- Notes Section (Glass Card) -->
+    <div class="md:col-span-3">
+      <div
+        class="bg-linear-to-br from-primary to-primary-container p-12 text-on-primary-fixed flex flex-col md:flex-row gap-12 items-center">
+        <div class="md:w-1/3">
+          <h2 class="text-5xl font-headline italic mb-4 text-white">Recent Notes</h2>
+          <p class="text-on-primary-container font-body leading-relaxed">Fleeting thoughts, morning reflections, and
+            intellectual scraps from the drafting room.</p>
+        </div>
+        <div class="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white/5 backdrop-blur-md p-6 border border-white/10">
+            <p class="text-sm font-body italic mb-4">"The screen is not a window; it is a canvas where light mimics
+              paper. We must treat it as such."</p>
+            <span class="text-[0.6rem] font-label uppercase tracking-widest opacity-60">Posted 2h ago</span>
+          </div>
+          <div class="bg-white/5 backdrop-blur-md p-6 border border-white/10">
+            <p class="text-sm font-body italic mb-4">"Sustainability in UI is about reducing visual cognitive load,
+              not just carbon footprints."</p>
+            <span class="text-[0.6rem] font-label uppercase tracking-widest opacity-60">Posted 1d ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- More Articles -->
+    <div class="group">
+      <div class="bg-surface-container-low p-8 h-full flex flex-col hover:bg-surface-container-high transition-all">
+        <span class="text-[0.6rem] font-label uppercase tracking-widest text-tertiary mb-2">Essay</span>
+        <h3 class="text-2xl font-headline group-hover:italic transition-all">The Ink in the Machine</h3>
+        <div class="mt-auto pt-8 flex items-center justify-between text-zinc-400">
+          <span class="font-label text-[0.6rem] uppercase tracking-widest">8 Min</span>
+          <span class="material-symbols-outlined text-sm">bookmark</span>
+        </div>
+      </div>
+    </div>
+    <div class="group">
+      <div class="bg-surface-container-low p-8 h-full flex flex-col hover:bg-surface-container-high transition-all">
+        <span class="text-[0.6rem] font-label uppercase tracking-widest text-tertiary mb-2">Review</span>
+        <h3 class="text-2xl font-headline group-hover:italic transition-all">Modernism Revived</h3>
+        <div class="mt-auto pt-8 flex items-center justify-between text-zinc-400">
+          <span class="font-label text-[0.6rem] uppercase tracking-widest">15 Min</span>
+          <span class="material-symbols-outlined text-sm">bookmark</span>
+        </div>
+      </div>
+    </div>
+    <div class="group">
+      <div class="bg-surface-container-low p-8 h-full flex flex-col hover:bg-surface-container-high transition-all">
+        <span class="text-[0.6rem] font-label uppercase tracking-widest text-tertiary mb-2">Curated</span>
+        <h3 class="text-2xl font-headline group-hover:italic transition-all">Library Essentials</h3>
+        <div class="mt-auto pt-8 flex items-center justify-between text-zinc-400">
+          <span class="font-label text-[0.6rem] uppercase tracking-widest">5 Min</span>
+          <span class="material-symbols-outlined text-sm">bookmark</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Reading Progress (Design System Token) -->
+<div class="fixed top-0 left-0 h-0.5 w-1/3 bg-surface-tint z-60"></div>
+<!-- </div> -->
+<!-- Floating Navigation for Mobile -->
+<div
+  class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-lg shadow-2xl rounded-full px-8 py-4 flex items-center gap-10 z-50">
+  <button class="material-symbols-outlined text-primary" data-weight="fill">home</button>
+  <button class="material-symbols-outlined text-zinc-400">book_2</button>
+  <button class="material-symbols-outlined text-zinc-400">edit_note</button>
+  <button class="material-symbols-outlined text-zinc-400">group</button>
+</div>
 <!-- </div> -->
 
 
-<div *ngIf="showEdit"  class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+<div *ngIf="showEdit" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
   <app-edit-profile (close)="closeEdit()"></app-edit-profile>
 </div>
