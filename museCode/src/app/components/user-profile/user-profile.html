@@ -2,9 +2,9 @@
   <div class="lg:col-span-4 relative">
     <div
       class="aspect-square bg-surface-container-low rounded-sm overflow-hidden shadow-[0_20px_40px_rgba(28,27,27,0.06)]">
-      <img alt="Elena Vane" class="w-full h-full object-cover"
-        data-alt="professional portrait of a writer with dark hair, wearing a beige linen shirt, standing in front of a minimalist white background"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZmIKchj5Xg91HkfT_lCgDe_KU3SFnSsl3Bue_Zz7bCGcfJnBe3degWBpFViv_OMa6XPn7fCb68uh_PnXibUPGOHpawIYt4JX62wr45jIcuQtdiXcxFzOOKtM0XEKKSSKJe7vOOXIVxVGqtQRqTBOBjA6mX3T0YjtTon6PTXj5kHzQ_biNdOPgjh6B0mwG1FDGA_lPUWxDXXYQc81-H_e7BKAuI1gBdk3qQUJZ-huYePahg7rrQ_GpFa3cueePvA6G2Sh8zFtazG8" />
+        <img alt="Profile Image"
+        class="w-full h-full object-cover"
+        [src]="profile.profileImageUrl"/>
     </div>
     <div class="absolute -bottom-6 -right-6 bg-tertiary w-16 h-16 flex items-center justify-center text-on-tertiary">
       <span class="material-symbols-outlined text-3xl">verified</span>
@@ -12,23 +12,20 @@
   </div>
   <div class="lg:col-span-8 space-y-8">
     <div>
-      <h1 class="text-6xl font-headline italic tracking-tighter text-primary mb-4">Elena Vane</h1>
-      <p class="text-xl font-body text-secondary max-w-2xl leading-relaxed">
-        Curating the intersection of classical literature and modern digital architecture. Writing on the philosophy
-        of space, both physical and virtual.
-      </p>
+      <h1 class="text-6xl font-headline italic tracking-tighter text-primary mb-4">{{ profile.displayName }}</h1>
+      <p class="text-xl font-body text-secondary max-w-2xl leading-relaxed">{{ profile.bio }}</p>
     </div>
     <div class="flex gap-12 items-center border-t border-outline-variant/15 pt-8">
       <div class="text-center md:text-left">
-        <span class="block text-3xl font-headline text-primary">142</span>
+        <span class="block text-3xl font-headline text-primary">{{ profile.articlesCount }}</span>
         <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Articles</span>
       </div>
       <div class="text-center md:text-left">
-        <span class="block text-3xl font-headline text-primary">12.8k</span>
+        <span class="block text-3xl font-headline text-primary">{{ profile.followersCount }}</span>
         <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Followers</span>
       </div>
       <div class="text-center md:text-left">
-        <span class="block text-3xl font-headline text-primary">840</span>
+        <span class="block text-3xl font-headline text-primary">{{ profile.followingCount }}</span>
         <span class="text-[0.6875rem] font-label uppercase tracking-widest text-zinc-400">Following</span>
       </div>
       <button (click)="openEdit()"
