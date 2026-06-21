@@ -16,7 +16,7 @@ export class UserProfile implements OnInit {
     userId: 0,
     displayName: null,
     username: null,
-    bio: null,
+    bio: 'Sharing thoughts and stories.',
     profileImageUrl: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
     followersCount: 0,
     followingCount: 0,
