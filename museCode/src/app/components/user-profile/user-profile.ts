@@ -35,14 +35,32 @@ export class UserProfile implements OnInit{
       return;
     }
 
-    this.profileService.getUserProfile(userId).subscribe({
-      next: (data) => {
-        this.profile = data as Profile;
-        console.log(this.profile);
-      },
+    // this.profileService.getUserProfile(userId).subscribe({
+    //   next: (data) => {
+    //     this.profile = data as Profile;
+    //     console.log(this.profile);
+    //   },
 
+    //   error: (err) => {
+    //     console.log(err);
+    //   }
+    // });
+
+    this.profileService.getUserProfile(userId).subscribe({
+      next: (data: Profile) => {
+        console.log('API Response:', data);
+
+        this.profile = {
+          ...data,
+          profileImageUrl:
+            data.profileImageUrl ||
+            'https://cdn-icons-png.flaticon.com/512/149/149071.png'
+        };
+
+        console.log('Updated Profile:', this.profile);
+      },
       error: (err) => {
-        console.log(err);
+        console.error('Profile Error:', err);
       }
     });
   }
