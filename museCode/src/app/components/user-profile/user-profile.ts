@@ -1,7 +1,7 @@
 import { ProfileService } from './../../service/profile/profile-service';
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { EditProfile } from "../edit-profile/edit-profile";
+import { EditProfile } from '../edit-profile/edit-profile';
 import { AuthService } from '../../service/auth/auth.service';
 import { Profile } from '../../../model/Profile.model';
 @Component({
@@ -10,8 +10,7 @@ import { Profile } from '../../../model/Profile.model';
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.css',
 })
-export class UserProfile implements OnInit{
-
+export class UserProfile implements OnInit {
   profile: Profile = {
     id: 0,
     userId: 0,
@@ -24,48 +23,49 @@ export class UserProfile implements OnInit{
     articlesCount: 0
   };
 
-  constructor(private authService: AuthService, private profileService: ProfileService) {}
+  showEdit = false;
+
+  constructor(
+    private authService: AuthService,
+    private profileService: ProfileService
+  ) {}
 
   ngOnInit(): void {
 
     const userId = this.authService.getUserId();
 
-    if (userId == null) {
+    if (!userId) {
       console.error('User ID is null');
       return;
     }
 
-    // this.profileService.getUserProfile(userId).subscribe({
-    //   next: (data) => {
-    //     this.profile = data as Profile;
-    //     console.log(this.profile);
-    //   },
-
-    //   error: (err) => {
-    //     console.log(err);
-    //   }
-    // });
-
     this.profileService.getUserProfile(userId).subscribe({
       next: (data: Profile) => {
+
         console.log('API Response:', data);
 
         this.profile = {
-          ...data,
+          id: data.id,
+          userId: data.userId,
+          displayName: data.displayName,
+          username: data.username,
+          bio: data.bio,
           profileImageUrl:
             data.profileImageUrl ||
-            'https://cdn-icons-png.flaticon.com/512/149/149071.png'
+            'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+          followersCount: data.followersCount,
+          followingCount: data.followingCount,
+          articlesCount: data.articlesCount
         };
 
         console.log('Updated Profile:', this.profile);
       },
+
       error: (err) => {
         console.error('Profile Error:', err);
       }
     });
   }
-
-  showEdit = false;
 
   openEdit() {
     this.showEdit = true;
@@ -74,6 +74,4 @@ export class UserProfile implements OnInit{
   closeEdit() {
     this.showEdit = false;
   }
-
-
 }
