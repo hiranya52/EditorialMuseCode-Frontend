@@ -9,7 +9,8 @@
         <span class="material-symbols-outlined">format_bold</span>
       </button>
 
-      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('italic')">
+      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('italic')"
+        [class.bg-primary]="isItalic" [class.text-white]="isItalic" class="p-2 rounded transition-colors">
         <span class="material-symbols-outlined">format_italic</span>
       </button>
 
