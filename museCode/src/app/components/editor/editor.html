@@ -1,89 +1,127 @@
 <div class="max-w-3xl mx-auto">
-  <!-- Contextual Toolbar (Floating on focus) -->
+
+  <!-- Toolbar -->
   <div class="flex items-center justify-between mb-12 border-b border-outline-variant/10 pb-4">
     <div class="flex items-center gap-4 text-stone-400">
-      <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined"
-          data-icon="format_bold">format_bold</span></button>
-      <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined"
-          data-icon="format_italic">format_italic</span></button>
-      <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined"
-          data-icon="link">link</span></button>
-      <div class="w-px h-4 bg-outline-variant/30"></div>
-      <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined"
-          data-icon="format_quote">format_quote</span></button>
-      <button class="hover:text-primary transition-colors"><span class="material-symbols-outlined"
-          data-icon="image">image</span></button>
-    </div>
-    <div class="flex items-center gap-6">
-      <button
-        class="font-label text-xs tracking-widest uppercase text-stone-500 hover:text-teal-700 transition-colors">Save
-        Draft</button>
-      <button
-        class="bg-primary text-on-primary px-6 py-2.5 rounded-sm font-label text-xs tracking-widest uppercase shadow-sm hover:opacity-90 active:scale-95 transition-all">Publish</button>
-    </div>
-  </div>
-  <!-- Editor Workspace -->
-  <div class="space-y-12">
-    <!-- Title Field -->
-    <div class="group">
-      <label
-        class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-2 block transition-colors group-focus-within:text-primary">Article
-        Title</label>
-      <!-- <textarea
-        class="w-full editorial-input font-headline text-5xl md:text-6xl font-bold leading-tight placeholder:text-stone-200 resize-none py-2"
-        placeholder="The Uninterrupted Flow of Thought" rows="1"></textarea> -->
 
-        <textarea #titleInput (input)="autoResize(titleInput)" rows="1"
-        class="w-full editorial-input font-headline text-5xl md:text-6xl font-bold leading-tight resize-none overflow-hidden  placeholder:text-stone-200 py-2"
-        placeholder="Start with a title...">
-</textarea>
+      <button
+        type="button"
+        class="hover:text-primary transition-colors"
+        (click)="formatText('bold')">
+        <span class="material-symbols-outlined">format_bold</span>
+      </button>
+
+      <button
+        type="button"
+        class="hover:text-primary transition-colors"
+        (click)="formatText('italic')">
+        <span class="material-symbols-outlined">format_italic</span>
+      </button>
+
+      <button
+        type="button"
+        class="hover:text-primary transition-colors"
+        (click)="formatText('underline')">
+        <span class="material-symbols-outlined">format_underlined</span>
+      </button>
+
+      <div class="w-px h-4 bg-outline-variant/30"></div>
+
+      <button
+        type="button"
+        class="hover:text-primary transition-colors"
+        (click)="formatText('insertUnorderedList')">
+        <span class="material-symbols-outlined">format_list_bulleted</span>
+      </button>
+
+      <button
+        type="button"
+        class="hover:text-primary transition-colors"
+        (click)="formatText('formatBlock', 'blockquote')">
+        <span class="material-symbols-outlined">format_quote</span>
+      </button>
+
     </div>
-    <!-- Cover Image Upload Area -->
-    <div class="relative group">
-      <div
-        class="w-full aspect-21/9 bg-surface-container-low border border-dashed border-outline-variant/30 rounded-sm flex flex-col items-center justify-center transition-all group-hover:bg-surface-container-high group-hover:border-primary/20 overflow-hidden">
-        <!-- Simulated Upload State/Preview -->
+  </div>
+
+  <!-- Title -->
+  <div class="group mb-10">
+    <label
+      class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-2 block">
+      Article Title
+    </label>
+
+    <textarea
+      #titleInput
+      [value]="title"
+      (input)="autoResize(titleInput); onTitleChange($event)"
+      rows="1"
+      class="w-full editorial-input font-headline text-5xl md:text-6xl font-bold leading-tight resize-none overflow-hidden placeholder:text-stone-200 py-2"
+      placeholder="Start with a title...">
+    </textarea>
+  </div>
+
+  <!-- Cover Image -->
+  <div class="relative group mb-10">
+
+    <input
+      type="file"
+      accept="image/*"
+      class="hidden"
+      #fileInput
+      (change)="onFileSelect($event)">
+
+    <div
+      (click)="fileInput.click()"
+      class="cursor-pointer w-full aspect-21/9 bg-surface-container-low border border-dashed border-outline-variant/30 rounded-sm flex flex-col items-center justify-center overflow-hidden">
+
+      @if (!coverImage) {
         <div class="text-center p-8">
-          <span class="material-symbols-outlined text-4xl text-stone-300 mb-4"
-            data-icon="add_a_photo">add_a_photo</span>
-          <p class="font-label text-xs tracking-widest uppercase text-stone-400">Add Cover Image</p>
-          <p class="text-[10px] text-stone-400 mt-2 font-body italic">Recommended: 2100 x 900px</p>
+          <span class="material-symbols-outlined text-4xl text-stone-300">
+            add_a_photo
+          </span>
+
+          <p class="font-label text-xs tracking-widest uppercase text-stone-400">
+            Add Cover Image
+          </p>
         </div>
-        <!-- Decorative Layer -->
-        <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors pointer-events-none">
-        </div>
-      </div>
+      }
+
+      @if (coverImage) {
+        <img
+          [src]="coverImage"
+          alt="cover"
+          class="w-full h-full object-cover">
+      }
+
     </div>
-    <!-- Main Content Area -->
-    <div class="min-h-150 prose prose-stone max-w-none">
-      <label class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-4 block">Content Body</label>
-      <textarea
-        class="w-full min-h-125 border-none focus:ring-0 bg-transparent font-body text-lg leading-relaxed placeholder:text-stone-200 resize-none p-0"
-        placeholder="Begin your narrative here..."></textarea>
-    </div>
+
   </div>
-  <!-- Footer Metadata Section -->
-  <div class="mt-20 pt-12 border-t border-outline-variant/10 flex flex-col md:flex-row gap-8 justify-between">
-    <div class="space-y-4">
-      <p class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400">Metadata</p>
-      <div class="flex flex-wrap gap-3">
-        <span
-          class="inline-flex items-center px-3 py-1 bg-primary-fixed text-on-primary-fixed-variant font-label text-[10px] tracking-wider uppercase rounded-full">
-          Essays
-        </span>
-        <span
-          class="inline-flex items-center px-3 py-1 bg-stone-100 text-stone-500 font-label text-[10px] tracking-wider uppercase rounded-full">
-          Design
-        </span>
-        <button
-          class="inline-flex items-center px-3 py-1 border border-outline-variant/20 text-stone-400 font-label text-[10px] tracking-wider uppercase rounded-full hover:border-primary transition-colors">
-          + Add Tag
-        </button>
-      </div>
+
+  <!-- Content Editor -->
+  <div class="min-h-150">
+
+    <label
+      class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-4 block">
+      Content Body
+    </label>
+
+    <div
+      #contentEditor
+      contenteditable="true"
+      class="min-h-125 outline-none font-body text-lg leading-relaxed"
+      (input)="onEditorInput()">
     </div>
-    <div class="text-right">
-      <p class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-2">Editor Stats</p>
-      <p class="font-body text-xs text-stone-500">Words: 0  •  Reading Time: &lt; 1 min</p>
-    </div>
+
   </div>
+
+  <!-- Stats -->
+  <div class="mt-10 border-t pt-6">
+    <p class="text-sm text-stone-500">
+      Words: {{ wordCount }}
+      •
+      Reading Time: {{ readingTime }} min
+    </p>
+  </div>
+
 </div>

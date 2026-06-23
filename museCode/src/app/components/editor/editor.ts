@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-editor',
@@ -15,6 +15,7 @@ export class Editor {
   @Output() titleChange = new EventEmitter<string>();
   @Output() contentChange = new EventEmitter<string>();
   @Output() coverChange = new EventEmitter<string>();
+
 
   autoResize(el: HTMLTextAreaElement) {
   el.style.height = 'auto';
