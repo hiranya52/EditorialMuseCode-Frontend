@@ -22,6 +22,12 @@ export class Editor {
   @ViewChild('contentEditor')
   contentEditor!: ElementRef<HTMLDivElement>;
 
+  ngOnInit(): void {
+  document.addEventListener('selectionchange', () => {
+    this.updateToolbarState();
+  });
+}
+
   formatText(command: string, value?: string): void {
     this.contentEditor.nativeElement.focus();
 
