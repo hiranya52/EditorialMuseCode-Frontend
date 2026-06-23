@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@
   styleUrl: './editor.css',
 })
 export class Editor {
-  
+
   isBold = false;
   isItalic = false;
   isUnderline = false;
@@ -24,16 +24,17 @@ export class Editor {
   contentEditor!: ElementRef<HTMLDivElement>;
 
   formatText(command: string, value?: string): void {
-    this.contentEditor.nativeElement.focus();
+  this.contentEditor.nativeElement.focus();
 
-    if (value) {
-      document.execCommand(command, false, value);
-    } else {
-      document.execCommand(command, false);
-    }
-
-    this.onEditorInput();
+  if (value) {
+    document.execCommand(command, false, value);
+  } else {
+    document.execCommand(command, false);
   }
+
+  this.updateToolbarState();
+  this.onEditorInput();
+}
 
   onEditorInput(): void {
     const html = this.contentEditor.nativeElement.innerHTML;
