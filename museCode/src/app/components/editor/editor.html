@@ -21,13 +21,10 @@
 
       <div class="w-px h-4 bg-outline-variant/30"></div>
 
-      <button type="button" (click)="formatText('insertUnorderedList')" [class.bg-primary]="isBulletList"
-        [class.text-white]="isBulletList" class="p-2 rounded transition-colors">
-
-        <span class="material-symbols-outlined">
-          format_list_bulleted
-        </span>
-
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="formatText('insertUnorderedList')"
+        [class.bg-primary]="isBulletList" [class.text-white]="isBulletList"
+        class="p-2 rounded hover:text-primary transition-colors">
+        <span class="material-symbols-outlined">format_list_bulleted</span>
       </button>
 
       <button type="button" class="hover:text-primary transition-colors"
