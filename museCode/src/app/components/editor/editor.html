@@ -4,39 +4,25 @@
   <div class="flex items-center justify-between mb-12 border-b border-outline-variant/10 pb-4">
     <div class="flex items-center gap-4 text-stone-400">
 
-      <button
-        type="button"
-        class="hover:text-primary transition-colors"
-        (click)="formatText('bold')">
+      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('bold')">
         <span class="material-symbols-outlined">format_bold</span>
       </button>
 
-      <button
-        type="button"
-        class="hover:text-primary transition-colors"
-        (click)="formatText('italic')">
+      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('italic')">
         <span class="material-symbols-outlined">format_italic</span>
       </button>
 
-      <button
-        type="button"
-        class="hover:text-primary transition-colors"
-        (click)="formatText('underline')">
+      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('underline')">
         <span class="material-symbols-outlined">format_underlined</span>
       </button>
 
       <div class="w-px h-4 bg-outline-variant/30"></div>
 
-      <button
-        type="button"
-        class="hover:text-primary transition-colors"
-        (click)="formatText('insertUnorderedList')">
+      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('insertUnorderedList')">
         <span class="material-symbols-outlined">format_list_bulleted</span>
       </button>
 
-      <button
-        type="button"
-        class="hover:text-primary transition-colors"
+      <button type="button" class="hover:text-primary transition-colors"
         (click)="formatText('formatBlock', 'blockquote')">
         <span class="material-symbols-outlined">format_quote</span>
       </button>
@@ -46,16 +32,11 @@
 
   <!-- Title -->
   <div class="group mb-10">
-    <label
-      class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-2 block">
+    <label class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-2 block">
       Article Title
     </label>
 
-    <textarea
-      #titleInput
-      [value]="title"
-      (input)="autoResize(titleInput); onTitleChange($event)"
-      rows="1"
+    <textarea #titleInput [value]="title" (input)="autoResize(titleInput); onTitleChange($event)" rows="1"
       class="w-full editorial-input font-headline text-5xl md:text-6xl font-bold leading-tight resize-none overflow-hidden placeholder:text-stone-200 py-2"
       placeholder="Start with a title...">
     </textarea>
@@ -64,34 +45,25 @@
   <!-- Cover Image -->
   <div class="relative group mb-10">
 
-    <input
-      type="file"
-      accept="image/*"
-      class="hidden"
-      #fileInput
-      (change)="onFileSelect($event)">
+    <input type="file" accept="image/*" class="hidden" #fileInput (change)="onFileSelect($event)">
 
-    <div
-      (click)="fileInput.click()"
+    <div (click)="fileInput.click()"
       class="cursor-pointer w-full aspect-21/9 bg-surface-container-low border border-dashed border-outline-variant/30 rounded-sm flex flex-col items-center justify-center overflow-hidden">
 
       @if (!coverImage) {
-        <div class="text-center p-8">
-          <span class="material-symbols-outlined text-4xl text-stone-300">
-            add_a_photo
-          </span>
+      <div class="text-center p-8">
+        <span class="material-symbols-outlined text-4xl text-stone-300">
+          add_a_photo
+        </span>
 
-          <p class="font-label text-xs tracking-widest uppercase text-stone-400">
-            Add Cover Image
-          </p>
-        </div>
+        <p class="font-label text-xs tracking-widest uppercase text-stone-400">
+          Add Cover Image
+        </p>
+      </div>
       }
 
       @if (coverImage) {
-        <img
-          [src]="coverImage"
-          alt="cover"
-          class="w-full h-full object-cover">
+      <img [src]="coverImage" alt="cover" class="w-full h-full object-cover">
       }
 
     </div>
@@ -101,16 +73,12 @@
   <!-- Content Editor -->
   <div class="min-h-150">
 
-    <label
-      class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-4 block">
+    <label class="font-label text-[10px] tracking-[0.2em] uppercase text-stone-400 mb-4 block">
       Content Body
     </label>
 
-    <div
-      #contentEditor
-      contenteditable="true"
-      class="min-h-125 outline-none font-body text-lg leading-relaxed"
-      (input)="onEditorInput()">
+    <div #contentEditor contenteditable="true"
+      class="min-h-[500px] outline-none font-body text-lg leading-relaxed border rounded p-4" (input)="onEditorInput()">
     </div>
 
   </div>
