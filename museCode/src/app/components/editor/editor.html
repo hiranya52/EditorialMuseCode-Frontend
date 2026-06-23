@@ -21,7 +21,8 @@
 
       <div class="w-px h-4 bg-outline-variant/30"></div>
 
-      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('insertUnorderedList')">
+      <button type="button" (click)="formatText('insertUnorderedList')" [class.bg-primary]="isBulletList"
+        [class.text-white]="isBulletList" class="p-2 rounded transition-colors">
 
         <span class="material-symbols-outlined">
           format_list_bulleted
@@ -85,7 +86,8 @@
     </label>
 
     <div #contentEditor contenteditable="true"
-      class="min-h-125 outline-none font-body text-lg leading-relaxed border rounded p-4 editor-content" (input)="onEditorInput()">
+      class="min-h-125 outline-none font-body text-lg leading-relaxed border rounded p-4 editor-content"
+      (input)="onEditorInput()">
     </div>
 
   </div>
