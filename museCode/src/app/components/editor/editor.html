@@ -14,10 +14,15 @@
         <span class="material-symbols-outlined">format_italic</span>
       </button>
 
-      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('underline')"
-        [class.bg-primary]="isUnderline" [class.text-white]="isUnderline" class="p-2 rounded transition-colors">
-        <span class="material-symbols-outlined">format_underlined</span>
-      </button>
+      <button
+  type="button"
+  (mousedown)="$event.preventDefault()"
+  (click)="formatText('underline')"
+  [class.bg-primary]="isUnderline"
+  [class.text-white]="isUnderline"
+  class="p-2 rounded hover:text-primary transition-colors">
+  <span class="material-symbols-outlined">format_underlined</span>
+</button>
 
       <div class="w-px h-4 bg-outline-variant/30"></div>
 
