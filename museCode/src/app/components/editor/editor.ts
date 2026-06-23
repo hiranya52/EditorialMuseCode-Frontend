@@ -10,6 +10,7 @@ export class Editor {
   isBold = false;
   isItalic = false;
   isUnderline = false;
+  isBulletList = false;
 
   @Input() title: string = '';
   @Input() content: string = '';
@@ -45,6 +46,7 @@ export class Editor {
     this.isBold = document.queryCommandState('bold');
     this.isItalic = document.queryCommandState('italic');
     this.isUnderline = document.queryCommandState('underline');
+    this.isBulletList = document.queryCommandState('insertUnorderedList');
   }
 
   onEditorInput(): void {
