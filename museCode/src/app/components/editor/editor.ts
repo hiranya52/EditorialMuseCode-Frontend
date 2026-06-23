@@ -1,19 +1,29 @@
-import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef,
+  OnInit,
+  OnDestroy
+} from '@angular/core';
 
 @Component({
   selector: 'app-editor',
   imports: [],
   templateUrl: './editor.html',
-  styleUrl: './editor.css',
+  styleUrl: './editor.css'
 })
-export class Editor {
+export class Editor implements OnInit, OnDestroy {
+
   isBold = false;
   isItalic = false;
   isUnderline = false;
   isBulletList = false;
 
-  @Input() title: string = '';
-  @Input() content: string = '';
+  @Input() title = '';
+  @Input() content = '';
   @Input() coverImage: string | null = null;
 
   @Output() titleChange = new EventEmitter<string>();
@@ -23,13 +33,26 @@ export class Editor {
   @ViewChild('contentEditor')
   contentEditor!: ElementRef<HTMLDivElement>;
 
-  ngOnInit(): void {
-  document.addEventListener('selectionchange', () => {
+  private selectionListener = () => {
     this.updateToolbarState();
-  });
-}
+  };
+
+  ngOnInit(): void {
+    document.addEventListener(
+      'selectionchange',
+      this.selectionListener
+    );
+  }
+
+  ngOnDestroy(): void {
+    document.removeEventListener(
+      'selectionchange',
+      this.selectionListener
+    );
+  }
 
   formatText(command: string, value?: string): void {
+
     this.contentEditor.nativeElement.focus();
 
     if (value) {
@@ -43,14 +66,30 @@ export class Editor {
   }
 
   updateToolbarState(): void {
-    this.isBold = document.queryCommandState('bold');
-    this.isItalic = document.queryCommandState('italic');
-    this.isUnderline = document.queryCommandState('underline');
-    this.isBulletList = document.queryCommandState('insertUnorderedList');
+
+    try {
+      this.isBold =
+        document.queryCommandState('bold');
+
+      this.isItalic =
+        document.queryCommandState('italic');
+
+      this.isUnderline =
+        document.queryCommandState('underline');
+
+      this.isBulletList =
+        document.queryCommandState(
+          'insertUnorderedList'
+        );
+
+    } catch {
+      // ignore
+    }
   }
 
   onEditorInput(): void {
-    const html = this.contentEditor.nativeElement.innerHTML;
+    const html =
+      this.contentEditor.nativeElement.innerHTML;
 
     this.content = html;
     this.contentChange.emit(html);
@@ -62,7 +101,9 @@ export class Editor {
   }
 
   onTitleChange(event: Event): void {
-    const value = (event.target as HTMLTextAreaElement).value;
+    const value =
+      (event.target as HTMLTextAreaElement).value;
+
     this.title = value;
     this.titleChange.emit(value);
   }
@@ -71,8 +112,10 @@ export class Editor {
     const input = event.target as HTMLInputElement;
 
     if (input.files?.length) {
+
       const file = input.files[0];
-      const imageUrl = URL.createObjectURL(file);
+      const imageUrl =
+        URL.createObjectURL(file);
 
       this.coverImage = imageUrl;
       this.coverChange.emit(imageUrl);
@@ -80,12 +123,19 @@ export class Editor {
   }
 
   get wordCount(): number {
-    const text = this.contentEditor?.nativeElement?.innerText || '';
 
-    return text.trim() ? text.trim().split(/\s+/).length : 0;
+    const text =
+      this.contentEditor?.nativeElement?.innerText || '';
+
+    return text.trim()
+      ? text.trim().split(/\s+/).length
+      : 0;
   }
 
   get readingTime(): number {
-    return Math.max(1, Math.ceil(this.wordCount / 200));
+    return Math.max(
+      1,
+      Math.ceil(this.wordCount / 200)
+    );
   }
 }
