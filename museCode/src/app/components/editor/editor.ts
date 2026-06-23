@@ -1,11 +1,4 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  ViewChild,
-  ElementRef
-} from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-editor',
@@ -14,6 +7,10 @@ import {
   styleUrl: './editor.css',
 })
 export class Editor {
+  
+  isBold = false;
+  isItalic = false;
+  isUnderline = false;
 
   @Input() title: string = '';
   @Input() content: string = '';
@@ -69,12 +66,9 @@ export class Editor {
   }
 
   get wordCount(): number {
-    const text =
-      this.contentEditor?.nativeElement?.innerText || '';
+    const text = this.contentEditor?.nativeElement?.innerText || '';
 
-    return text.trim()
-      ? text.trim().split(/\s+/).length
-      : 0;
+    return text.trim() ? text.trim().split(/\s+/).length : 0;
   }
 
   get readingTime(): number {
