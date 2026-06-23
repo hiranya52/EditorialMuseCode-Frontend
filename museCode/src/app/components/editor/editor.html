@@ -14,7 +14,8 @@
         <span class="material-symbols-outlined">format_italic</span>
       </button>
 
-      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('underline')">
+      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('underline')"
+        [class.bg-primary]="isUnderline" [class.text-white]="isUnderline" class="p-2 rounded transition-colors">
         <span class="material-symbols-outlined">format_underlined</span>
       </button>
 
