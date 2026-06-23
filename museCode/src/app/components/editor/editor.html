@@ -4,8 +4,9 @@
   <div class="flex items-center justify-between mb-12 border-b border-outline-variant/10 pb-4">
     <div class="flex items-center gap-4 text-stone-400">
 
-      <button type="button" class="hover:text-primary transition-colors" (click)="formatText('bold')"
-        [class.bg-primary]="isBold" [class.text-white]="isBold" class="p-2 rounded transition-colors">
+      <button type="button" (mousedown)="$event.preventDefault()" (click)="formatText('bold')"
+        [class.bg-primary]="isBold" [class.text-white]="isBold"
+        class="p-2 rounded hover:text-primary transition-colors">
         <span class="material-symbols-outlined">format_bold</span>
       </button>
 
