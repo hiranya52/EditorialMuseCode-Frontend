@@ -26,7 +26,6 @@ export class Followers {
     private authService: AuthService,
     private profileService: ProfileService,
   ) {}
-
   ngOnInit(): void {
     const userId = this.authService.getUserId();
 
