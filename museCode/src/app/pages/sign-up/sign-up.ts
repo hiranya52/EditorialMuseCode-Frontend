@@ -41,15 +41,9 @@ export class SignUp {
     this.router.navigate(['/personalize-feed']);
   }
 
-
-
   onSubmit(){
 
     const registerData: Register = this.signupForm.value;
-
-    // this.userService.register(registerData).subscribe((res) => {
-    //   console.log(res);
-    // });
 
     this.userService.register(registerData).subscribe({
     next: (res: any) => {
@@ -64,7 +58,6 @@ export class SignUp {
       console.log(err);
     }
   });
-
 
 
   }
