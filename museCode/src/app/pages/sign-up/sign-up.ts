@@ -43,22 +43,25 @@ export class SignUp {
 
   onSubmit(){
 
+    if (this.signupForm.invalid) {
+      this.signupForm.markAllAsTouched();
+      return;
+    }
+
     const registerData: Register = this.signupForm.value;
 
     this.userService.register(registerData).subscribe({
-    next: (res: any) => {
-      console.log(res);
+      next: (res: any) => {
+        console.log(res);
 
-      if (res.message === 'User registered successfully') {
-        this.goToFeed();
+        if (res.message === 'User registered successfully') {
+          this.goToFeed();
+        }
+      },
+      error: (err) => {
+        console.log(err);
       }
-    },
-
-    error: (err) => {
-      console.log(err);
-    }
-  });
-
+    });
 
   }
 
