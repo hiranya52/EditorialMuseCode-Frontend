@@ -1,6 +1,6 @@
 import { User } from './../../service/user/user';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Register } from '../../../model/Register.model';
 import { Router } from '@angular/router';
 
@@ -26,9 +26,9 @@ export class SignUp {
   ) {
 
     this.signupForm = this.formBuilder.group({
-      fullName: [''],
-      email: [''],
-      password: ['']
+      fullName: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
 
   }
