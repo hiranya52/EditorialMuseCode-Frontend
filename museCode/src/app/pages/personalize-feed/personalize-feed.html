@@ -30,23 +30,6 @@
       <div class="category-grid overflow-y-auto grow px-2 mb-10">
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
-          <!-- @for (category of categories; track category.id) {
-
-          <button (click)="toggleCategory(category.id)"
-            [ngClass]="isSelected(category.id) ? selectedClass : normalClass">
-
-            <span class="font-label text-sm">
-              {{ category.name }}
-            </span>
-
-            @if (isSelected(category.id)) {
-
-            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">
-              check_circle
-            </span>
-            }
-          </button>
-          } -->
           <div *ngFor="let category of categories">
 
             <button (click)="toggleCategory(category.id)"
